@@ -1,0 +1,16 @@
+﻿Analyzing mobile_app...                                         
+
+   info - The imported package 'url_launcher' isn't a dependency of the importing package - lib\features\legal_resources\screens\emergency_screen.dart:3:8 - depend_on_referenced_packages
+   info - The imported package 'pdf' isn't a dependency of the importing package - lib\features\legal_resources\screens\templates_screen.dart:6:8 - depend_on_referenced_packages
+  error - Target of URI doesn't exist: 'package:pdf/pdf.dart' - lib\features\legal_resources\screens\templates_screen.dart:6:8 - uri_does_not_exist
+   info - The imported package 'pdf' isn't a dependency of the importing package - lib\features\legal_resources\screens\templates_screen.dart:7:8 - depend_on_referenced_packages
+  error - Target of URI doesn't exist: 'package:pdf/widgets.dart' - lib\features\legal_resources\screens\templates_screen.dart:7:8 - uri_does_not_exist
+   info - The imported package 'printing' isn't a dependency of the importing package - lib\features\legal_resources\screens\templates_screen.dart:8:8 - depend_on_referenced_packages
+  error - Target of URI doesn't exist: 'package:printing/printing.dart' - lib\features\legal_resources\screens\templates_screen.dart:8:8 - uri_does_not_exist
+  error - Undefined name 'PdfGoogleFonts' - lib\features\legal_resources\screens\templates_screen.dart:99:15 - undefined_identifier
+  error - Undefined name 'PdfGoogleFonts' - lib\features\legal_resources\screens\templates_screen.dart:100:28 - undefined_identifier
+  error - Undefined name 'PdfPageFormat' - lib\features\legal_resources\screens\templates_screen.dart:104:21 - undefined_identifier
+  error - Undefined name 'Printing' - lib\features\legal_resources\screens\templates_screen.dart:133:11 - undefined_identifier
+  error - Undefined class 'PdfPageFormat' - lib\features\legal_resources\screens\templates_screen.dart:134:18 - undefined_class
+   info - 'value' is deprecated and shouldn't be used. Use initialValue instead. This will set the initial value for the form field. This feature was deprecated after v3.33.0-1.0.pre - lib\features\legal_resources\screens\templates_screen.dart:159:21 - deprecated_member_use
+
