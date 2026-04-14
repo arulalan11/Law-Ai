@@ -1,73 +1,195 @@
-# Law-AI: Empowering Citizens Through Legal Intelligence ⚖️🤖
+# ⚖️🤖 Law.Ai — AI-Powered Legal Assistant for India
 
-**Law-AI** is a cutting-edge platform designed to bridge the gap between complex legal systems and the common citizen. By combining AI-driven guidance with a robust digital library of legal resources, we aim to make legal literacy accessible, affordable, and immediate for everyone.
-
-## 🏛️ The Problem & Our Solution
-
-### **The Problem**
-Navigating the legal landscape is often daunting. Most people face:
-- **Language Barriers**: Legal documents are filled with complex jargon.
-- **High Costs**: Getting basic legal advice can be expensive.
-- **Information Overload**: Finding the right act or section (like IPC) is time-consuming.
-- **Accessibility**: Knowing where to find the nearest legal authority or emergency help is not always clear.
-
-### **Our Solution: Law-AI**
-We provide a **one-stop digital legal companion** that simplifies the law through technology. From instant AI-powered answers to finding your local police station, Law-AI is built to be your first point of contact for anything legal.
+**Law.Ai** is a localized, accessible, and intelligent legal assistant designed specifically for Indian law. It leverages **AI + Retrieval-Augmented Generation (RAG)** to deliver accurate, grounded, and multilingual legal guidance to everyday citizens.
 
 ---
 
-## 🌟 Core Modules & Features
+## 📌 Overview
 
-### 🤖 AI Legal Assistant (24/7)
-Our intelligent chatbot is more than just a search engine. It understands your natural language queries and provides simplified legal explanations based on standard laws. Whether you're curious about property rights or traffic rules, our AI helps you understand your position.
+Navigating legal systems in India can be complex due to language barriers, lack of awareness, and high consultation costs.
 
-### 📚 Digital Legal Library
-No more carrying heavy law books.
-- **IPC Explorer**: Full access to the Indian Penal Code, searchable by keywords or section numbers.
-- **Interactive Acts**: Browse through various specialized legal acts with a user-friendly UI.
-- **Legal Resource Hub**: A centralized place for all your legal education needs.
+**Law.Ai solves this by:**
+- Providing **AI-driven legal assistance**
+- Supporting **regional languages**
+- Ensuring **fact-based answers using RAG**
+- Enabling **voice-based interaction (TTS + STT)**
 
-### 🆘 Emergency & SOS Support
-In critical situations, every second counts.
-- **One-Tap Emergency**: Quick access to emergency contacts.
-- **Local Authority Status**: Real-time information for law enforcement and legal aid offices.
+---
 
-### 📍 Authority Locator
-Find and navigate to the nearest police stations, courts, and legal aid clinics using built-in GPS and location services.
+## 🏛️ Problem Statement
 
-### 📝 Smart Document Templates
-Save time and money on basic documentation. We provide verified templates for:
-- Affidavits
-- Rental Agreements
-- Legal Notices
-- And many more ready-to-fill formats.
+- Legal language is difficult to understand  
+- Access to lawyers is expensive  
+- Lack of awareness about rights  
+- Difficulty in finding correct legal sections  
+- Limited accessibility for non-English speakers  
+
+---
+
+## 💡 Solution
+
+Law.Ai acts as a **digital legal companion** that:
+- Simplifies Indian law using AI  
+- Provides **instant, reliable answers**  
+- Enables **voice-based legal interaction**  
+- Guides users with **step-by-step legal actions**  
 
 ---
 
 ## 🛠️ Technology Stack
 
-### **Frontend: Flutter**
-Built with Google's UI toolkit for a smooth, high-performance experience on both Android and iOS.
-- **State Management**: Scalable architecture for clean code.
-- **Accessibility**: Built-in Text-to-Speech (TTS) to help bridge literacy gaps.
+### 📱 Frontend (Mobile & Web)
+- **Framework:** Flutter (Dart)
+- **UI/UX:** Custom Material Design
+- **Accessibility:** Multilingual support (Tamil, Hindi, Malayalam, English)
+- **Voice Features:**
+  - Speech-to-Text (STT) for query input  
+  - Text-to-Speech (TTS) for AI responses  
+  - Markdown stripping for clean voice output  
 
-### **Backend: FastAPI & Supabase**
-- **FastAPI**: A high-speed Python framework for lightning-fast API responses.
-- **Supabase**: Enterprise-grade database security and user authentication.
+---
+
+### ⚙️ Backend (API & Logic)
+- **Framework:** FastAPI (Python)
+- **Database & Auth:** Supabase (PostgreSQL)
+- **Validation:** Pydantic
+- **Architecture:** Asynchronous APIs for fast processing  
+
+---
+
+### 🧠 AI & RAG Infrastructure
+
+- **Vector Database:** ChromaDB  
+- **Embeddings:** `gemini-embedding-001`  
+- **LLM Engine:**  
+  - `gemini-2.5-flash`  
+  - `gemini-1.5-pro`  
+
+---
+
+## ⚙️ RAG Pipeline Methodology
+
+Law.Ai avoids hallucinations by grounding every response in real legal data.
+
+> 💡 The system behaves like a lawyer referencing law books — not guessing answers.
+
+### 🔹 1. Ingestion Phase
+- Loads `indian_law_dataset.json`
+- Contains:
+  - Indian Constitution  
+  - IPC Sections  
+  - Consumer Laws  
+- Adds metadata:
+  - `category`, `act`, `section`, `keywords`
+- Stores embeddings in **ChromaDB**
+
+---
+
+### 🔹 2. Retrieval Phase
+- User submits query (any supported language)
+- Query is converted into embeddings
+- Top 5 relevant legal chunks are retrieved
+
+---
+
+### 🔹 3. Generation Phase
+- Injects retrieved laws into LLM prompt
+- Generates:
+  - Context-aware legal answer  
+  - Real law citations  
+  - Translated output  
+  - Follow-up suggestions  
+
+---
+
+## ✨ Core Features
+
+### 🎤 Multilingual Voice Interaction
+- Speech-to-Text (STT) for voice queries  
+- Text-to-Speech (TTS) for spoken responses  
+- Supports:
+  - Tamil  
+  - Hindi  
+  - Malayalam  
+  - English  
+
+---
+
+### 📚 Context-Grounded Legal Answers
+- Answers strictly from legal dataset  
+- Prevents AI hallucinations  
+- Includes real Act & Section references  
+
+---
+
+### 🆘 Emergency Support
+- Instant legal help in critical situations  
+- Minimal interaction required  
+- Designed for real-world use  
+
+---
+
+### 💬 Conversation Memory
+- Stored using Supabase  
+- Enables continuous conversations  
+- Maintains legal context  
+
+---
+
+### 📝 Step-by-Step Legal Guidance
+- Actionable legal advice  
+- Simplified explanations  
+- Helps users take correct next steps  
 
 ---
 
 ## 📂 Project Structure
+```
+Law.Ai/
+├── mobile_app/ # Flutter app (UI + Voice + Chat)
+├── backend/ # FastAPI APIs + RAG pipeline
+├── knowledge_base/ # Legal dataset (JSON + embeddings)
+├── vector_db/ # ChromaDB storage
+├── voice_module/ # TTS + STT integration
+└── architecture_ui/ # UI/UX design assets
+```
+## 🚀 Key Advantages
 
-- `/mobile_app`: The Flutter source code (Features: Chat, Legal Resources, Emergency).
-- `/backend`: Python API, models, and third-party integrations.
-- `/architecture_ui`: Planning documents and UI design system.
+- ✅ Multilingual accessibility  
+- ✅ Voice-enabled interface  
+- ✅ Accurate legal responses (RAG)  
+- ✅ Fast and scalable backend  
+- ✅ User-friendly design  
 
 ---
 
-## 🚀 Future Roadmap
-- [ ] Voice integration for vernacular languages.
-- [ ] Offline access to core legal acts.
-- [ ] Peer-to-peer legal aid connecting users with verified lawyers.
+## 🔮 Future Roadmap
 
-Built with ❤️ to make justice accessible to all.
+- [ ] Offline RAG support  
+- [ ] More regional languages  
+- [ ] Voice-based document filling  
+- [ ] Real-time voice AI conversation  
+- [ ] Lawyer consultation integration  
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository  
+2. Create a new branch  
+3. Commit your changes  
+4. Open a Pull Request  
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## ⭐ Support
+
+If you found this project useful, give it a ⭐ on GitHub!
