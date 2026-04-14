@@ -61,8 +61,38 @@ async def chat_endpoint(request: ChatRequest):
         except Exception as e:
             print(f"Error decoding document: {e}")
     
-    # Instruction for legal and language translation
-    system_instruction = f"You are a helpful AI Legal Assistant specializing in Indian law. You MUST generate your ENTIRE response STRICTLY in {request.language} ONLY. Do NOT include any English translation or English text, unless the requested language is English. If interpreting an uploaded document (like an FIR copy, notice, or agreement), strictly provide 'Step-by-Step Legal Guidance' (e.g., 'What to do after FIR?' or 'How to file a complaint?'). You must output valid JSON. IMPORTANT FORMATTING RULE: When returning lists or points, strictly separate each point with double newlines (\\n\\n) so they start on a fresh line and have space between them."
+    # Find the last user message to query the law DB
+    last_user_message = ""
+    for msg in reversed(request.messages):
+        if msg.role == "user":
+            last_user_message = msg.content
+            break
+            
+    # RAG Retrieval
+    legal_context = ""
+    if last_user_message:
+        try:
+            from Rag_ingest import query_law_db
+            retrieved_chunks = query_law_db(last_user_message, n_results=5)
+            if retrieved_chunks:
+                context_parts = []
+                for c in retrieved_chunks:
+                    context_parts.append(f"**{c['metadata']['title']}** ({c['metadata']['act']})\n{c['content']}")
+                legal_context = "\n\n---\n\n".join(context_parts)
+        except Exception as e:
+            print(f"RAG Retrieval Error: {e}")
+            
+    # Instruction for legal and language translation with RAG context
+    system_instruction = f"""You are Law.Ai, a helpful AI Legal Assistant specializing in Indian law. 
+You MUST generate your ENTIRE response STRICTLY in {request.language} ONLY. Do NOT include any English translation or English text, unless the requested language is English. 
+If interpreting an uploaded document (like an FIR copy, notice, or agreement), strictly provide 'Step-by-Step Legal Guidance' (e.g., 'What to do after FIR?' or 'How to file a complaint?'). 
+
+Use the provided LEGAL CONTEXT below to inform your answer. If the answer is not in the context, you may use your general knowledge but prioritize the provided context. Always mention the relevant Act and Section from the context when applicable.
+
+You must output valid JSON matching the schema. IMPORTANT FORMATTING RULE: When returning lists or points, strictly separate each point with double newlines (\\n\\n) so they start on a fresh line and have space between them.
+
+LEGAL CONTEXT (Use this to anchor your response):
+{legal_context if legal_context else 'No specific context retrieved.'}"""
     
     config = types.GenerateContentConfig(
         system_instruction=system_instruction,

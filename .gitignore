@@ -16,3 +16,5 @@ venv.bak/
 backend/venv/
 backend/__pycache__/
 backend/.env
+backend/law_ai_db/
+backend/law_ai_db_gemini/

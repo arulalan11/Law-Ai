@@ -1,0 +1,692 @@
+{
+  "metadata": {
+    "dataset_name": "Indian Law RAG Dataset",
+    "version": "1.0",
+    "project": "Law.Ai",
+    "total_chunks": 80,
+    "categories": [
+      "Constitutional Law",
+      "Criminal Law",
+      "Civil Law",
+      "Consumer Protection",
+      "Labour Law",
+      "Family Law",
+      "Cyber Law",
+      "Social Justice Law",
+      "Property Law",
+      "RTI"
+    ],
+    "chunk_format": {
+      "id": "unique identifier",
+      "category": "area of law",
+      "act": "name of the act or constitution",
+      "section_article": "relevant section/article number",
+      "title": "short descriptive title",
+      "content": "RAG-ready text content",
+      "keywords": "list of searchable terms",
+      "source": "official source reference"
+    }
+  },
+  "chunks": [
+    {
+      "id": "CONST-001",
+      "category": "Constitutional Law",
+      "act": "Constitution of India",
+      "section_article": "Article 12",
+      "title": "Definition of State",
+      "content": "Article 12 of the Constitution of India defines 'State' for the purposes of Fundamental Rights. It includes the Government and Parliament of India, the Government and Legislature of each State, and all local or other authorities within the territory of India or under the control of the Government of India. This broad definition ensures that fundamental rights can be enforced against government bodies, public corporations, and agencies exercising governmental functions.",
+      "keywords": ["state", "government", "fundamental rights", "parliament", "legislature", "constitution"],
+      "source": "Constitution of India, Part III"
+    },
+    {
+      "id": "CONST-002",
+      "category": "Constitutional Law",
+      "act": "Constitution of India",
+      "section_article": "Article 13",
+      "title": "Laws Inconsistent with Fundamental Rights",
+      "content": "Article 13 declares that all pre-constitutional laws which are inconsistent with or in derogation of fundamental rights shall be void to the extent of such inconsistency. It also prohibits the State from making any law which takes away or abridges the rights conferred by Part III (Fundamental Rights). Any law made in contravention of this article shall be void. This article is the foundation of judicial review in India, allowing courts to strike down unconstitutional laws.",
+      "keywords": ["judicial review", "unconstitutional", "void", "fundamental rights", "pre-constitutional law"],
+      "source": "Constitution of India, Article 13"
+    },
+    {
+      "id": "CONST-003",
+      "category": "Constitutional Law",
+      "act": "Constitution of India",
+      "section_article": "Article 14",
+      "title": "Right to Equality Before Law",
+      "content": "Article 14 guarantees equality before the law and equal protection of the laws within the territory of India to all persons. 'Equality before law' means the absence of any special privilege in favor of any individual, while 'equal protection of laws' means like should be treated alike. The Supreme Court has interpreted this to include the doctrine of reasonableness and non-arbitrariness — meaning any state action that is arbitrary or unreasonable can be challenged as a violation of Article 14.",
+      "keywords": ["equality", "equal protection", "non-arbitrariness", "discrimination", "reasonable classification"],
+      "source": "Constitution of India, Article 14"
+    },
+    {
+      "id": "CONST-004",
+      "category": "Constitutional Law",
+      "act": "Constitution of India",
+      "section_article": "Article 15",
+      "title": "Prohibition of Discrimination",
+      "content": "Article 15 prohibits the State from discriminating against any citizen on grounds only of religion, race, caste, sex, or place of birth. No citizen shall be subjected to any disability, liability, restriction or condition on these grounds in access to shops, public restaurants, hotels, places of public entertainment, or use of wells, tanks, roads, etc. maintained wholly or partly out of State funds. Article 15(3) allows special provisions for women and children. Article 15(4) and 15(5) allow reservations for socially and educationally backward classes, Scheduled Castes, and Scheduled Tribes.",
+      "keywords": ["discrimination", "caste", "religion", "sex", "reservation", "OBC", "SC", "ST", "women", "children"],
+      "source": "Constitution of India, Article 15"
+    },
+    {
+      "id": "CONST-005",
+      "category": "Constitutional Law",
+      "act": "Constitution of India",
+      "section_article": "Article 16",
+      "title": "Equality of Opportunity in Public Employment",
+      "content": "Article 16 guarantees equality of opportunity for all citizens in matters relating to employment or appointment to any office under the State. No citizen can be discriminated against in public employment on grounds of religion, race, caste, sex, descent, place of birth, or residence. Article 16(4) allows the State to make provisions for reservation of appointments or posts in favor of any backward class of citizens which, in its opinion, is not adequately represented in the services under the State. This forms the constitutional basis of job reservations.",
+      "keywords": ["reservation", "employment", "public service", "backward class", "caste", "government job", "OBC", "SC ST"],
+      "source": "Constitution of India, Article 16"
+    },
+    {
+      "id": "CONST-006",
+      "category": "Constitutional Law",
+      "act": "Constitution of India",
+      "section_article": "Article 17",
+      "title": "Abolition of Untouchability",
+      "content": "Article 17 abolishes untouchability and forbids its practice in any form. Enforcement of any disability arising out of untouchability shall be an offence punishable in accordance with law. This is an absolute right — it cannot be suspended even during a national emergency. The Protection of Civil Rights Act, 1955 and the Scheduled Castes and Scheduled Tribes (Prevention of Atrocities) Act, 1989 were enacted to give effect to this article. Untouchability includes denial of access to temples, water sources, roads, and public places.",
+      "keywords": ["untouchability", "dalit", "discrimination", "SC", "scheduled caste", "atrocities", "caste discrimination", "Ambedkar"],
+      "source": "Constitution of India, Article 17"
+    },
+    {
+      "id": "CONST-007",
+      "category": "Constitutional Law",
+      "act": "Constitution of India",
+      "section_article": "Article 19",
+      "title": "Freedom of Speech and Expression",
+      "content": "Article 19 guarantees to all citizens six fundamental freedoms: (a) freedom of speech and expression, (b) right to assemble peaceably without arms, (c) right to form associations or unions, (d) right to move freely throughout India, (e) right to reside and settle anywhere in India, and (g) right to practice any profession or carry on any occupation, trade or business. These rights are subject to reasonable restrictions which the State may impose in the interests of sovereignty and integrity of India, security of the State, public order, decency, morality, contempt of court, defamation, or incitement to an offence.",
+      "keywords": ["freedom of speech", "expression", "assembly", "association", "profession", "press freedom", "reasonable restrictions"],
+      "source": "Constitution of India, Article 19"
+    },
+    {
+      "id": "CONST-008",
+      "category": "Constitutional Law",
+      "act": "Constitution of India",
+      "section_article": "Article 21",
+      "title": "Right to Life and Personal Liberty",
+      "content": "Article 21 states that no person shall be deprived of his life or personal liberty except according to procedure established by law. The Supreme Court has expansively interpreted this article to include the right to live with human dignity, right to livelihood, right to health, right to education (now also Article 21A), right to privacy (K.S. Puttaswamy judgment 2017), right to a clean environment, right to free legal aid, right to speedy trial, right against custodial torture, and the right to die with dignity. It is the most widely interpreted fundamental right in the Constitution.",
+      "keywords": ["right to life", "liberty", "dignity", "privacy", "health", "environment", "speedy trial", "personal liberty"],
+      "source": "Constitution of India, Article 21"
+    },
+    {
+      "id": "CONST-009",
+      "category": "Constitutional Law",
+      "act": "Constitution of India",
+      "section_article": "Article 21A",
+      "title": "Right to Education",
+      "content": "Article 21A, inserted by the 86th Constitutional Amendment Act 2002, provides that the State shall provide free and compulsory education to all children of the age of 6 to 14 years in such manner as the State may, by law, determine. To implement this, the Right of Children to Free and Compulsory Education Act (RTE Act) was enacted in 2009. Private schools must reserve 25% of seats for children from economically weaker sections. Children cannot be held back, expelled, or required to pass a board examination until class 8.",
+      "keywords": ["education", "RTE", "free education", "compulsory education", "children", "school", "EWS", "86th amendment"],
+      "source": "Constitution of India, Article 21A; RTE Act 2009"
+    },
+    {
+      "id": "CONST-010",
+      "category": "Constitutional Law",
+      "act": "Constitution of India",
+      "section_article": "Article 22",
+      "title": "Protection Against Arbitrary Arrest and Detention",
+      "content": "Article 22 provides safeguards against arbitrary arrest and detention. Key protections include: (1) every arrested person must be informed of the grounds of arrest, (2) the arrested person has the right to consult and be defended by a legal practitioner of their choice, (3) the arrested person must be produced before the nearest magistrate within 24 hours of arrest, and (4) no person shall be detained in custody beyond 24 hours without magistrate's authority. These rights do not apply to enemy aliens or persons detained under preventive detention laws.",
+      "keywords": ["arrest", "detention", "magistrate", "24 hours", "legal aid", "lawyer", "preventive detention", "rights of accused"],
+      "source": "Constitution of India, Article 22"
+    },
+    {
+      "id": "CONST-011",
+      "category": "Constitutional Law",
+      "act": "Constitution of India",
+      "section_article": "Article 32",
+      "title": "Right to Constitutional Remedies - Writ Jurisdiction",
+      "content": "Article 32 is called the 'heart and soul of the Constitution' by Dr. B.R. Ambedkar. It gives every citizen the right to move the Supreme Court for enforcement of Fundamental Rights. The Supreme Court can issue five types of writs: (1) Habeas Corpus — to produce an illegally detained person before court, (2) Mandamus — to compel a public body to perform its duty, (3) Prohibition — to prevent a lower court from exceeding jurisdiction, (4) Certiorari — to quash an order of an inferior court, (5) Quo Warranto — to challenge a person's claim to a public office. High Courts have similar powers under Article 226.",
+      "keywords": ["writ", "habeas corpus", "mandamus", "certiorari", "prohibition", "quo warranto", "supreme court", "constitutional remedy", "Ambedkar"],
+      "source": "Constitution of India, Article 32"
+    },
+    {
+      "id": "CONST-012",
+      "category": "Constitutional Law",
+      "act": "Constitution of India",
+      "section_article": "Articles 36-51",
+      "title": "Directive Principles of State Policy",
+      "content": "Directive Principles of State Policy (DPSPs) are guidelines to the central and state governments. Though not enforceable by courts, they are fundamental to governance. Key DPSPs include: Article 39 — equal pay for equal work and right to adequate livelihood; Article 39A — free legal aid; Article 41 — right to work, education and public assistance; Article 43 — living wage for workers; Article 45 — free and compulsory education for children (now a Fundamental Right); Article 46 — promotion of educational and economic interests of SC/ST and weaker sections; Article 47 — duty to raise level of nutrition and standard of living; Article 51A — fundamental duties.",
+      "keywords": ["DPSP", "directive principles", "welfare state", "living wage", "equal pay", "SC ST", "free legal aid", "governance"],
+      "source": "Constitution of India, Part IV"
+    },
+    {
+      "id": "IPC-001",
+      "category": "Criminal Law",
+      "act": "Indian Penal Code 1860 (Now BNS 2023)",
+      "section_article": "Section 300 IPC / Section 100 BNS",
+      "title": "Definition of Murder",
+      "content": "Murder is defined as culpable homicide amounting to murder when the act is done with intention of causing death; or with intention of causing bodily injury likely to cause death; or with knowledge that the act is imminently dangerous and will in all probability cause death. The punishment for murder under Section 302 IPC (now Section 101 BNS) is death or imprisonment for life, and also fine. Exceptions include grave and sudden provocation, right of private defence, act of public servant, sudden fight, and consent of victim above 18 years in certain cases.",
+      "keywords": ["murder", "homicide", "IPC 302", "BNS 101", "death penalty", "life imprisonment", "culpable homicide", "crime"],
+      "source": "Indian Penal Code, Section 300-302; Bharatiya Nyaya Sanhita 2023, Section 100-101"
+    },
+    {
+      "id": "IPC-002",
+      "category": "Criminal Law",
+      "act": "Indian Penal Code 1860 (Now BNS 2023)",
+      "section_article": "Section 375-376 IPC / Section 63-64 BNS",
+      "title": "Rape and Sexual Assault",
+      "content": "Under IPC Section 375 (BNS Section 63), rape is defined as sexual intercourse with a woman against her will, without her consent, by coercion or misrepresentation, or when she is unable to understand the nature and consequences. The minimum punishment under Section 376 IPC is 7 years imprisonment, which may extend to life imprisonment. Aggravated forms (by police, public servant, gang rape, rape of minors) attract 10 years to life imprisonment or death. Consent obtained under fear of death or hurt is not valid consent. Sexual intercourse with wife below 18 years also constitutes rape.",
+      "keywords": ["rape", "sexual assault", "consent", "IPC 375", "IPC 376", "BNS 63", "women safety", "POCSO", "gang rape"],
+      "source": "IPC Sections 375-376D; BNS Sections 63-70"
+    },
+    {
+      "id": "IPC-003",
+      "category": "Criminal Law",
+      "act": "Indian Penal Code 1860 (Now BNS 2023)",
+      "section_article": "Section 420 IPC / Section 318 BNS",
+      "title": "Cheating and Fraud",
+      "content": "Section 420 IPC (Section 318 BNS) deals with cheating and dishonestly inducing delivery of property. Cheating is defined as deceiving a person and fraudulently or dishonestly inducing them to deliver any property, or to consent to the retention of any property, or intentionally inducing them to do or omit to do anything which they would not do or omit if they were not deceived. The punishment is imprisonment up to 7 years and fine. Cheating by personation (impersonating another person) is also an offence. Online fraud under Section 420 is frequently charged alongside IT Act provisions.",
+      "keywords": ["cheating", "fraud", "IPC 420", "deception", "property", "online fraud", "cybercrime", "BNS 318"],
+      "source": "IPC Section 415, 420; BNS Section 316, 318"
+    },
+    {
+      "id": "IPC-004",
+      "category": "Criminal Law",
+      "act": "Indian Penal Code 1860 (Now BNS 2023)",
+      "section_article": "Section 498A IPC / Section 85 BNS",
+      "title": "Cruelty to Wife / Dowry Harassment",
+      "content": "Section 498A IPC (Section 85 BNS) makes it an offence for a husband or his relatives to subject a woman to cruelty. Cruelty includes: (a) willful conduct likely to drive her to suicide or cause grave injury to her life, limb, or health; (b) harassment to coerce her or her relatives to meet unlawful demands for property or dowry. This is a cognizable, non-bailable, and non-compoundable offence. Punishment is imprisonment up to 3 years and fine. False cases under 498A have led to guidelines by the Supreme Court requiring a preliminary inquiry before arrest.",
+      "keywords": ["498A", "dowry", "domestic violence", "cruelty", "wife", "harassment", "BNS 85", "matrimonial offence"],
+      "source": "IPC Section 498A; BNS Section 85; Rajesh Sharma v. State of UP (2017)"
+    },
+    {
+      "id": "IPC-005",
+      "category": "Criminal Law",
+      "act": "Indian Penal Code 1860 (Now BNS 2023)",
+      "section_article": "Sections 503-506 IPC / Section 351-353 BNS",
+      "title": "Criminal Intimidation and Threats",
+      "content": "Criminal intimidation under Section 503 IPC (Section 351 BNS) means threatening another person with injury to their person, reputation, or property, or to the person or reputation of anyone in whom they are interested, with intent to cause alarm or compel them to do or omit to do something. Punishment ranges from 2 to 7 years depending on the nature of the threat. Threatening to kill or cause grievous hurt or imputing unchastity to a woman carries up to 7 years. Sending threatening messages via email, social media, or phone also constitutes criminal intimidation.",
+      "keywords": ["threat", "intimidation", "IPC 506", "criminal intimidation", "BNS 351", "cyberbullying", "extortion"],
+      "source": "IPC Sections 503-506; BNS Sections 351-353"
+    },
+    {
+      "id": "CRPC-001",
+      "category": "Criminal Law",
+      "act": "Code of Criminal Procedure 1973 (Now BNSS 2023)",
+      "section_article": "Section 154 CrPC / Section 173 BNSS",
+      "title": "FIR - First Information Report",
+      "content": "An FIR (First Information Report) is registered under Section 154 CrPC (Section 173 BNSS) when information relating to a cognizable offence is given to the police. The FIR must be written, read over to the informant, and signed by them. The informant is entitled to a free copy of the FIR. If police refuse to register an FIR, the aggrieved person can approach the Superintendent of Police or directly approach a Magistrate under Section 156(3) CrPC. The Supreme Court in Lalita Kumari v. State of UP (2013) held that registration of FIR is mandatory for cognizable offences, leaving no discretion to police.",
+      "keywords": ["FIR", "first information report", "police complaint", "cognizable offence", "CrPC 154", "BNSS 173", "Lalita Kumari"],
+      "source": "CrPC Section 154; BNSS Section 173; Lalita Kumari v. Govt. of UP (2013)"
+    },
+    {
+      "id": "CRPC-002",
+      "category": "Criminal Law",
+      "act": "Code of Criminal Procedure 1973 (Now BNSS 2023)",
+      "section_article": "Section 438 CrPC / Section 482 BNSS",
+      "title": "Anticipatory Bail",
+      "content": "Anticipatory bail under Section 438 CrPC (Section 482 BNSS) allows a person to seek bail in anticipation of an arrest. It is granted by Sessions Court or High Court when there is reasonable apprehension of arrest on accusation of a non-bailable offence. Factors considered include: nature of the accusation, antecedents of the applicant, possibility of fleeing justice, and whether the accusation is made to humiliate. Once granted, it remains in force unless cancelled. The court can impose conditions like not tampering with evidence, not leaving India, or surrendering passport.",
+      "keywords": ["anticipatory bail", "pre-arrest bail", "CrPC 438", "BNSS 482", "High Court", "Sessions Court", "non-bailable offence"],
+      "source": "CrPC Section 438; BNSS Section 482"
+    },
+    {
+      "id": "CRPC-003",
+      "category": "Criminal Law",
+      "act": "Code of Criminal Procedure 1973 (Now BNSS 2023)",
+      "section_article": "Section 436-437 CrPC / Section 478-480 BNSS",
+      "title": "Bail in Bailable and Non-Bailable Offences",
+      "content": "In bailable offences, bail is a matter of right under Section 436 CrPC (Section 478 BNSS) — the accused is entitled to be released on bail upon furnishing surety or personal bond. In non-bailable offences under Section 437 CrPC (Section 480 BNSS), bail is at the discretion of the court. Bail can be refused if there are reasonable grounds to believe the accused committed an offence punishable with death or life imprisonment, is accused of a cognizable offence and has previous convictions, or may flee justice. Bail conditions typically include surrendering the passport, not leaving the country, and reporting to the police station periodically.",
+      "keywords": ["bail", "bailable", "non-bailable", "surety", "bond", "CrPC 436", "CrPC 437", "BNSS 478", "custody", "release"],
+      "source": "CrPC Sections 436-437; BNSS Sections 478-480"
+    },
+    {
+      "id": "CRPC-004",
+      "category": "Criminal Law",
+      "act": "Code of Criminal Procedure 1973 (Now BNSS 2023)",
+      "section_article": "Section 164 CrPC / Section 183 BNSS",
+      "title": "Recording of Confessions and Statements",
+      "content": "Section 164 CrPC (Section 183 BNSS) empowers a Magistrate to record confessions and statements of witnesses during investigation. Before recording a confession, the Magistrate must warn the accused that they are not bound to confess and that any confession made may be used against them. A confession made to police is not admissible in court but a confession recorded by a Magistrate is admissible. Statements of witnesses recorded by a Magistrate can be used for corroboration or contradiction of witnesses at trial. In rape cases, the victim's statement is recorded by a female Magistrate.",
+      "keywords": ["confession", "statement", "magistrate", "CrPC 164", "BNSS 183", "admissible evidence", "investigation"],
+      "source": "CrPC Section 164; BNSS Section 183"
+    },
+    {
+      "id": "CONSUMER-001",
+      "category": "Consumer Protection",
+      "act": "Consumer Protection Act 2019",
+      "section_article": "Section 2(7)",
+      "title": "Who is a Consumer",
+      "content": "Under the Consumer Protection Act 2019, a 'consumer' is a person who buys goods or avails services for consideration. A consumer does not include a person who obtains goods for resale or commercial purposes. However, a person who avails services exclusively for self-employment is considered a consumer. The 2019 Act extended protection to e-commerce transactions, making online buyers also consumers. A consumer can file a complaint individually, through a voluntary consumer organization, or through the Central or State Government.",
+      "keywords": ["consumer", "buyer", "services", "goods", "e-commerce", "online shopping", "Consumer Protection Act 2019"],
+      "source": "Consumer Protection Act 2019, Section 2(7)"
+    },
+    {
+      "id": "CONSUMER-002",
+      "category": "Consumer Protection",
+      "act": "Consumer Protection Act 2019",
+      "section_article": "Section 34-58",
+      "title": "Consumer Disputes Redressal Commissions",
+      "content": "Consumer complaints are adjudicated by a three-tier quasi-judicial machinery: (1) District Consumer Disputes Redressal Commission — handles complaints up to Rs. 1 crore; (2) State Consumer Disputes Redressal Commission — handles complaints between Rs. 1 crore and Rs. 10 crore, and appeals from District Commission; (3) National Consumer Disputes Redressal Commission (NCDRC) — handles complaints above Rs. 10 crore and appeals from State Commissions. Complaints must be filed within 2 years from the date the cause of action arose. The process is free from court fees. Mediation is encouraged before adjudication.",
+      "keywords": ["consumer forum", "NCDRC", "state commission", "district commission", "complaint", "redressal", "1 crore", "deficiency in service"],
+      "source": "Consumer Protection Act 2019, Sections 34-58"
+    },
+    {
+      "id": "CONSUMER-003",
+      "category": "Consumer Protection",
+      "act": "Consumer Protection Act 2019",
+      "section_article": "Section 2(11), 2(17)",
+      "title": "Deficiency in Service and Defective Goods",
+      "content": "A 'defect' means any fault, imperfection, or shortcoming in the quality, quantity, potency, purity, or standard of goods. 'Deficiency' means any fault, imperfection, shortcoming or inadequacy in quality, nature, and manner of performance of a service. A consumer can seek remedies for defective goods, deficiency in service, unfair trade practices, and restrictive trade practices. Unfair trade practices include misleading advertisements, bargain sale misrepresentation, fake offers, and unsolicited calls. Product liability under the 2019 Act allows consumers to claim compensation from product manufacturers, sellers, and service providers.",
+      "keywords": ["defect", "deficiency", "service", "product liability", "unfair trade practice", "misleading advertisement", "compensation"],
+      "source": "Consumer Protection Act 2019, Sections 2(11), 2(17), Chapter VI"
+    },
+    {
+      "id": "RTI-001",
+      "category": "RTI",
+      "act": "Right to Information Act 2005",
+      "section_article": "Section 3-6",
+      "title": "Right to Seek Information from Government",
+      "content": "The Right to Information Act 2005 empowers every citizen of India to request information from any public authority. A public authority includes any authority or body established by the Constitution, law made by Parliament or State Legislature, government notification, or substantially financed by government funds. Citizens can seek copies of documents, inspection of records, and information in electronic form. The Public Information Officer (PIO) must respond within 30 days (48 hours for matters involving life and liberty). An application can be filed with a fee of Rs. 10 (BPL applicants are exempted). RTI cannot be used to obtain personal information of a third party.",
+      "keywords": ["RTI", "right to information", "government", "public authority", "PIO", "transparency", "30 days", "application"],
+      "source": "Right to Information Act 2005, Sections 3-6"
+    },
+    {
+      "id": "RTI-002",
+      "category": "RTI",
+      "act": "Right to Information Act 2005",
+      "section_article": "Section 8-9",
+      "title": "Exemptions Under RTI Act",
+      "content": "Section 8 of the RTI Act lists categories of information that are exempt from disclosure: (1) information prejudicial to national security, sovereignty, and integrity; (2) information prohibited by court order; (3) privileged parliamentary proceedings; (4) trade secrets and intellectual property causing competitive harm; (5) information received in fiduciary capacity; (6) information received from foreign governments; (7) information endangering life or safety of a person; (8) cabinet papers and deliberations of the Council of Ministers; and (9) personal information with no public activity nexus. However, information relating to corruption and human rights violations cannot be exempted.",
+      "keywords": ["RTI exemption", "national security", "cabinet papers", "trade secrets", "disclosure", "Section 8", "privacy"],
+      "source": "Right to Information Act 2005, Sections 8-9"
+    },
+    {
+      "id": "LABOUR-001",
+      "category": "Labour Law",
+      "act": "Minimum Wages Act 1948",
+      "section_article": "Section 3-5",
+      "title": "Minimum Wages for Workers",
+      "content": "The Minimum Wages Act 1948 mandates that all scheduled employers pay workers at least the minimum wage fixed by the appropriate government (Central or State). Minimum wages are fixed based on skill categories: unskilled, semi-skilled, skilled, and highly skilled. Both basic wages and cost of living allowance (dearness allowance) are included. Failure to pay minimum wages is punishable with imprisonment up to 6 months and/or fine up to Rs. 500 (now higher under the Code on Wages 2019). Workers can file a complaint before the Inspector or authority. The Code on Wages 2019 consolidates four labour laws: Minimum Wages Act, Payment of Wages Act, Payment of Bonus Act, and Equal Remuneration Act.",
+      "keywords": ["minimum wage", "labour law", "worker rights", "skilled unskilled", "dearness allowance", "Code on Wages 2019", "employer"],
+      "source": "Minimum Wages Act 1948; Code on Wages 2019"
+    },
+    {
+      "id": "LABOUR-002",
+      "category": "Labour Law",
+      "act": "Maternity Benefit Act 1961 (Amended 2017)",
+      "section_article": "Section 5",
+      "title": "Maternity Benefits for Working Women",
+      "content": "The Maternity Benefit Act 1961, as amended in 2017, provides 26 weeks of paid maternity leave for women employees with up to two children (12 weeks for women with more than two children). For adopting mothers and commissioning mothers, 12 weeks of maternity leave is available from the date of adoption. Employers with 50 or more employees must provide crèche facilities. Women employees must be informed about maternity benefits at the time of appointment. No woman employee can be dismissed or have service conditions unfavorably altered during maternity leave. Women cannot be required to work during the 6 weeks before and after delivery.",
+      "keywords": ["maternity leave", "26 weeks", "pregnant women", "working women", "crèche", "dismissal protection", "Maternity Benefit Act"],
+      "source": "Maternity Benefit Act 1961, amended 2017"
+    },
+    {
+      "id": "LABOUR-003",
+      "category": "Labour Law",
+      "act": "Payment of Gratuity Act 1972",
+      "section_article": "Section 4",
+      "title": "Gratuity Rights of Employees",
+      "content": "Under the Payment of Gratuity Act 1972, an employee is entitled to gratuity after completing 5 years of continuous service with the same employer. Gratuity is calculated at 15 days' wages for each completed year of service. The maximum gratuity payable is Rs. 20 lakhs (as amended in 2018). Gratuity is payable to the employee on superannuation, resignation, retirement, or to the nominee/legal heir on death or disablement. Gratuity must be paid within 30 days of becoming due. For seasonal workers, the formula is 7 days' wages per season. Employers employing 10 or more persons are covered.",
+      "keywords": ["gratuity", "5 years service", "retirement", "resignation", "employment", "20 lakhs", "15 days wages", "Payment of Gratuity Act"],
+      "source": "Payment of Gratuity Act 1972, Section 4"
+    },
+    {
+      "id": "LABOUR-004",
+      "category": "Labour Law",
+      "act": "Employees' Provident Fund and Miscellaneous Provisions Act 1952",
+      "section_article": "Section 6",
+      "title": "EPF - Provident Fund for Employees",
+      "content": "The Employees' Provident Fund (EPF) scheme under the EPF & Miscellaneous Provisions Act 1952 requires both employer and employee to contribute 12% each of the employee's basic salary and dearness allowance to the provident fund. Establishments with 20 or more employees are covered. The EPF provides retirement savings, insurance (EDLI scheme), and pension (EPS) benefits. Employees can withdraw EPF on retirement, resignation after 2 months of unemployment, housing, medical treatment, marriage, or education of children. The EPFO (Employees' Provident Fund Organisation) manages the scheme. Non-payment of EPF by employers is a criminal offence.",
+      "keywords": ["EPF", "provident fund", "PF", "EPFO", "retirement", "12 percent", "employer contribution", "pension", "EDLI"],
+      "source": "EPF & MP Act 1952"
+    },
+    {
+      "id": "FAMILY-001",
+      "category": "Family Law",
+      "act": "Hindu Marriage Act 1955",
+      "section_article": "Section 5",
+      "title": "Conditions for a Valid Hindu Marriage",
+      "content": "Under the Hindu Marriage Act 1955, a valid marriage requires: (1) neither party has a living spouse at the time of marriage; (2) neither party is incapable of giving valid consent due to unsoundness of mind or is unfit for marriage; (3) the bridegroom must be at least 21 years and the bride at least 18 years (Prohibition of Child Marriage Act 2006); (4) the parties are not within the degrees of prohibited relationship unless custom permits; (5) the parties are not sapindas of each other unless custom permits. Non-compliance with conditions (1) and (4) makes the marriage void. Non-compliance with conditions (2) and (5) makes it voidable.",
+      "keywords": ["Hindu marriage", "valid marriage", "conditions", "age", "void marriage", "voidable", "bigamy", "prohibited relationship"],
+      "source": "Hindu Marriage Act 1955, Section 5"
+    },
+    {
+      "id": "FAMILY-002",
+      "category": "Family Law",
+      "act": "Hindu Marriage Act 1955",
+      "section_article": "Section 13",
+      "title": "Grounds for Divorce",
+      "content": "Under the Hindu Marriage Act 1955, divorce can be sought on the following grounds: (1) adultery — voluntary sexual intercourse with someone other than spouse; (2) cruelty — mental or physical; (3) desertion for 2 or more years; (4) conversion to another religion; (5) unsound mind for 3 or more years; (6) leprosy (now removed by 2019 amendment); (7) venereal disease in communicable form; (8) renunciation of the world; (9) not heard of being alive for 7 years. Additional grounds available only to wife: husband's second marriage, rape, sodomy or bestiality by husband, non-resumption of cohabitation after maintenance decree, and repudiation of marriage (option of puberty).",
+      "keywords": ["divorce", "grounds", "adultery", "cruelty", "desertion", "Hindu marriage", "wife", "petition", "matrimonial"],
+      "source": "Hindu Marriage Act 1955, Section 13"
+    },
+    {
+      "id": "FAMILY-003",
+      "category": "Family Law",
+      "act": "Hindu Succession Act 1956 (Amended 2005)",
+      "section_article": "Section 6",
+      "title": "Equal Property Rights for Daughters",
+      "content": "The Hindu Succession (Amendment) Act 2005 is a landmark reform granting daughters equal coparcenary rights in ancestral property. Before 2005, only sons had coparcenary rights. After the amendment, a daughter is now a coparcener by birth in the same manner as a son. She has the same rights and liabilities in coparcenary property as a son. The Supreme Court in Vineeta Sharma v. Rakesh Sharma (2020) held that the 2005 amendment applies retrospectively — meaning daughters born before 2005 also have equal rights, even if the father died before 2005.",
+      "keywords": ["daughters property rights", "ancestral property", "coparcenary", "Hindu succession", "equal rights", "2005 amendment", "Vineeta Sharma", "inheritance"],
+      "source": "Hindu Succession Act 1956, Section 6; Vineeta Sharma v. Rakesh Sharma (2020)"
+    },
+    {
+      "id": "FAMILY-004",
+      "category": "Family Law",
+      "act": "Muslim Personal Law / Muslim Women (Protection of Rights on Divorce) Act 1986",
+      "section_article": "General",
+      "title": "Muslim Marriage and Divorce Laws",
+      "content": "Muslim marriage (Nikah) is a civil contract requiring offer and acceptance in the presence of witnesses. Mehr (dower) is an obligatory gift from husband to wife. Triple Talaq (instant divorce by pronouncing talaq three times) was declared unconstitutional by the Supreme Court in Shayara Bano v. Union of India (2017). The Muslim Women (Protection of Rights on Marriage) Act 2019 criminalises instant triple talaq with up to 3 years imprisonment. A Muslim woman is entitled to maintenance during iddat period (3 months after divorce) and for fair and reasonable provision after iddat. Khula is a divorce initiated by the wife. Mubarat is divorce by mutual consent.",
+      "keywords": ["Muslim marriage", "nikah", "talaq", "triple talaq", "mehr", "iddat", "khula", "Muslim personal law", "Shayara Bano"],
+      "source": "Muslim Personal Law (Shariat) Application Act 1937; Muslim Women (Protection of Rights on Marriage) Act 2019"
+    },
+    {
+      "id": "FAMILY-005",
+      "category": "Family Law",
+      "act": "Protection of Women from Domestic Violence Act 2005",
+      "section_article": "Section 3, 12",
+      "title": "Domestic Violence — Protection and Remedies",
+      "content": "The Protection of Women from Domestic Violence Act 2005 protects women from domestic violence in domestic relationships. Domestic violence includes physical abuse, sexual abuse, verbal and emotional abuse, and economic abuse (denial of financial resources). Any aggrieved woman (including wife, live-in partner, sister, mother, daughter) can approach a Protection Officer or Magistrate. Remedies available include: Protection Order (restraining abuser), Residence Order (right to live in shared household), Monetary Relief (maintenance), Custody Order, and Compensation Order. Violation of a protection order is a criminal offence punishable with up to 1 year imprisonment.",
+      "keywords": ["domestic violence", "DV Act", "protection order", "women rights", "abuse", "live-in partner", "shared household", "monetary relief", "maintenance"],
+      "source": "Protection of Women from Domestic Violence Act 2005"
+    },
+    {
+      "id": "CYBER-001",
+      "category": "Cyber Law",
+      "act": "Information Technology Act 2000",
+      "section_article": "Section 43, 66",
+      "title": "Hacking and Unauthorised Computer Access",
+      "content": "Section 43 of the IT Act 2000 provides civil remedies for unauthorized access to computer systems, downloading or copying data, introducing viruses or malware, damaging or destroying data, and causing denial of service attacks. Compensation can be claimed up to Rs. 5 crore. Section 66 makes hacking a criminal offence with imprisonment up to 3 years and/or fine up to Rs. 5 lakhs for intentional or knowingly unauthorized access to computer resources. Accessing a computer resource without the owner's consent, even without causing damage, is an offence. Evidence of computer crime can be challenged on the grounds of authenticity and reliability under the Indian Evidence Act.",
+      "keywords": ["hacking", "cybercrime", "IT Act 66", "unauthorized access", "computer", "virus", "data theft", "cyber security"],
+      "source": "Information Technology Act 2000, Sections 43, 66"
+    },
+    {
+      "id": "CYBER-002",
+      "category": "Cyber Law",
+      "act": "Information Technology Act 2000",
+      "section_article": "Section 66A, 66C, 66D, 66E",
+      "title": "Online Offences — Identity Theft, Defamation, Privacy",
+      "content": "Section 66A (struck down by Supreme Court in Shreya Singhal v. UoI 2015) was used to punish offensive online messages but was found to be unconstitutional. Section 66C punishes identity theft — fraudulent use of electronic signatures, passwords, or unique identification features — with up to 3 years imprisonment. Section 66D punishes cheating by personation using a computer resource — up to 3 years imprisonment. Section 66E punishes violation of privacy by intentionally capturing, publishing, or transmitting images of private parts of a person without consent — up to 3 years imprisonment. These provisions cover crimes like SIM swapping, fake profiles, and voyeurism.",
+      "keywords": ["identity theft", "IT Act 66C", "66D", "66E", "online defamation", "privacy violation", "fake profile", "Section 66A Shreya Singhal"],
+      "source": "IT Act 2000, Sections 66A-66F; Shreya Singhal v. Union of India (2015)"
+    },
+    {
+      "id": "CYBER-003",
+      "category": "Cyber Law",
+      "act": "Information Technology Act 2000",
+      "section_article": "Section 67, 67A, 67B",
+      "title": "Cyber Pornography and CSAM Laws",
+      "content": "Section 67 of the IT Act punishes publishing or transmitting obscene material in electronic form with up to 3 years imprisonment for first offence, 5 years for subsequent offences. Section 67A punishes publishing sexually explicit material with up to 5 years imprisonment. Section 67B specifically criminalises child sexual abuse material (CSAM) — publishing, browsing, creating, or facilitating child pornography — with up to 5 years imprisonment for first offence, 7 years for subsequent. The POCSO Act 2012 provides additional protections for children. Reporting CSAM to a platform without reporting to police constitutes an offence by the platform under Section 67B.",
+      "keywords": ["cyber pornography", "CSAM", "child pornography", "POCSO", "IT Act 67", "obscene", "Section 67B", "child safety online"],
+      "source": "IT Act 2000, Sections 67-67B; POCSO Act 2012"
+    },
+    {
+      "id": "SOCIAL-001",
+      "category": "Social Justice Law",
+      "act": "SC/ST Prevention of Atrocities Act 1989",
+      "section_article": "Section 3",
+      "title": "Atrocities Against Scheduled Castes and Scheduled Tribes",
+      "content": "The Scheduled Castes and Scheduled Tribes (Prevention of Atrocities) Act 1989 was enacted to prevent crimes against SC/ST communities. Section 3 lists specific atrocities including: forcing to drink obnoxious substances, dumping excreta on premises, parading naked, denying right to use water sources, preventing SC/ST persons from using public places, insults and intimidation, sexual exploitation of SC/ST women, dispossessing them of land, and imposing social or economic boycott. The Act was amended in 2015 to add more offences. Offences are cognizable and non-bailable. Special courts are designated for trial. The State must provide relief to victims within 60 days.",
+      "keywords": ["SC ST atrocities", "dalit", "tribal", "caste crime", "Prevention of Atrocities Act", "scheduled caste", "scheduled tribe", "social justice"],
+      "source": "SC/ST Prevention of Atrocities Act 1989, Section 3; 2015 Amendment"
+    },
+    {
+      "id": "SOCIAL-002",
+      "category": "Social Justice Law",
+      "act": "SC/ST Prevention of Atrocities Act 1989",
+      "section_article": "Section 14-17",
+      "title": "Special Courts and Rights of Victims Under Atrocities Act",
+      "content": "The SC/ST Prevention of Atrocities Act 1989 provides for Special Courts and Exclusive Special Courts in each Sessions division to try offences. Victims are entitled to witness protection. The State must appoint a Special Public Prosecutor for each case. A charge sheet must be filed within 60 days. The Act mandates relief and rehabilitation to victims including immediate compensation, food, shelter, medical aid, transport expenses, and funeral assistance. In Prithvi Raj Chauhan v. Union of India (2020), the Supreme Court upheld that anticipatory bail is not available for offences under this Act.",
+      "keywords": ["special court", "atrocities act", "dalit rights", "SC ST", "public prosecutor", "victim relief", "anticipatory bail", "Prithvi Raj Chauhan"],
+      "source": "SC/ST Prevention of Atrocities Act 1989, Sections 14-17"
+    },
+    {
+      "id": "SOCIAL-003",
+      "category": "Social Justice Law",
+      "act": "Rights of Persons with Disabilities Act 2016",
+      "section_article": "Section 3, 16, 20",
+      "title": "Rights and Reservations for Persons with Disabilities",
+      "content": "The Rights of Persons with Disabilities Act 2016 replaced the Persons with Disabilities Act 1995. It recognizes 21 categories of disabilities. Key rights include: equal recognition before law, right against discrimination, reservation of 5% in higher educational institutions and 4% in government jobs, accessibility in public buildings and transportation, right to education in inclusive environment, right to rehabilitation, and right to habilitation. No person with disability shall be discriminated against in employment decisions including promotions. Special employment exchanges must be established for persons with disabilities.",
+      "keywords": ["disability", "reservation", "RPWD Act 2016", "4 percent", "5 percent", "accessibility", "equal rights", "disabled persons"],
+      "source": "Rights of Persons with Disabilities Act 2016"
+    },
+    {
+      "id": "SOCIAL-004",
+      "category": "Social Justice Law",
+      "act": "Protection of Civil Rights Act 1955",
+      "section_article": "Section 3-7",
+      "title": "Civil Rights Violations and Untouchability Offences",
+      "content": "The Protection of Civil Rights Act 1955 was enacted to enforce Article 17 of the Constitution, which abolishes untouchability. The Act penalises enforcement of any disability arising from untouchability. Offences include: refusing admission to public places (temples, hospitals, schools, shops), preventing use of wells, tanks, rivers, or roads, insults based on untouchability, and refusal of goods and services based on caste. The punishment ranges from 1 month to 6 months imprisonment and fine. Offences are cognizable. Repeat offenders face enhanced punishment. Religious preachers who preach untouchability can also be punished.",
+      "keywords": ["untouchability", "civil rights", "PCR Act", "temple entry", "caste discrimination", "public places", "scheduled caste"],
+      "source": "Protection of Civil Rights Act 1955"
+    },
+    {
+      "id": "PROPERTY-001",
+      "category": "Property Law",
+      "act": "Transfer of Property Act 1882",
+      "section_article": "Section 5, 54",
+      "title": "Transfer of Property and Sale",
+      "content": "Transfer of property means an act by which a living person conveys property to one or more living persons. A sale under Section 54 of the Transfer of Property Act 1882 is a transfer of ownership in exchange for a price paid or promised. In the case of immovable property worth Rs. 100 or more, a sale must be effected by a registered instrument (written and registered sale deed). Possession of immovable property can be handed over at the time of sale or earlier or later. In the case of tangible movable property, delivery of the property constitutes the sale. A sale deed must be registered under the Registration Act 1908 at the Sub-Registrar's office.",
+      "keywords": ["sale deed", "property transfer", "immovable property", "registration", "TPA 1882", "ownership", "sub-registrar", "stamp duty"],
+      "source": "Transfer of Property Act 1882, Sections 5, 54"
+    },
+    {
+      "id": "PROPERTY-002",
+      "category": "Property Law",
+      "act": "Transfer of Property Act 1882",
+      "section_article": "Section 58",
+      "title": "Mortgage — Types and Rights",
+      "content": "A mortgage is a transfer of interest in specific immovable property to secure payment of money advanced or to be advanced as a loan. Types of mortgages: (1) Simple Mortgage — mortgagor binds himself to pay but does not deliver possession; (2) Mortgage by conditional sale — sale with redemption condition; (3) Usufructuary Mortgage — possession delivered, income applied towards interest and principal; (4) English Mortgage — personal covenant plus conditional transfer of property; (5) Equitable Mortgage (mortgage by deposit of title deeds) — created by depositing title documents in major towns; (6) Anomalous Mortgage — any other form. A mortgagor has the right to redeem (pay off) the mortgage at any time.",
+      "keywords": ["mortgage", "loan security", "immovable property", "equitable mortgage", "redemption", "TPA Section 58", "home loan"],
+      "source": "Transfer of Property Act 1882, Section 58"
+    },
+    {
+      "id": "PROPERTY-003",
+      "category": "Property Law",
+      "act": "Indian Stamp Act 1899 / Registration Act 1908",
+      "section_article": "General",
+      "title": "Stamp Duty and Registration of Property",
+      "content": "Stamp duty is a state subject and varies across states — typically ranging from 3% to 8% of the property's market value. In Tamil Nadu, stamp duty is 7% of the guideline value or market value (whichever is higher). Registration charges are additional (1% of property value). A document not properly stamped cannot be admitted as evidence in court. Registration of property under the Registration Act 1908 makes the transfer effective against third parties. Documents required for property registration include sale deed, identity proof, PAN card, encumbrance certificate, and payment receipts. E-registration is available in many states.",
+      "keywords": ["stamp duty", "registration", "property", "sale deed", "guideline value", "market value", "encumbrance certificate", "Tamil Nadu"],
+      "source": "Indian Stamp Act 1899; Registration Act 1908"
+    },
+    {
+      "id": "POCSO-001",
+      "category": "Criminal Law",
+      "act": "Protection of Children from Sexual Offences Act 2012",
+      "section_article": "Section 3-8",
+      "title": "POCSO — Sexual Offences Against Children",
+      "content": "POCSO Act 2012 protects children below 18 years from sexual abuse and exploitation. Section 3 defines penetrative sexual assault; Section 5 covers aggravated penetrative sexual assault (by police, family member, in a position of trust) — punishable with minimum 10 years to life imprisonment and fine. Section 7 covers sexual assault; Section 11 covers sexual harassment of children. The Act is gender-neutral — both boys and girls are protected. Consent by a minor is irrelevant. FIR must be recorded by a woman police officer at the child's residence if possible. Trial must be completed within 1 year. The 2019 amendment introduced death penalty for aggravated penetrative sexual assault.",
+      "keywords": ["POCSO", "child sexual abuse", "child protection", "minor", "sexual assault", "child rape", "1 year trial", "death penalty"],
+      "source": "POCSO Act 2012, amended 2019"
+    },
+    {
+      "id": "MOTOR-001",
+      "category": "Civil Law",
+      "act": "Motor Vehicles Act 1988 (Amended 2019)",
+      "section_article": "Section 140, 166",
+      "title": "Compensation in Motor Accident Claims",
+      "content": "Under the Motor Vehicles Act 1988, victims of road accidents can claim compensation under two provisions: (1) No-fault liability under Section 140 — fixed compensation of Rs. 50,000 for permanent disablement and Rs. 25,000 for death, without establishing negligence; (2) Fault-based claim under Section 166 — claim before Motor Accidents Claims Tribunal (MACT) for full compensation based on negligence. Compensation includes loss of income, medical expenses, pain and suffering, loss of consortium, and funeral expenses. A structured formula (multiplier method) is used. In hit-and-run accidents, compensation is available from the Solatium Fund. The 2019 amendment significantly increased penalties for traffic violations.",
+      "keywords": ["motor accident", "MACT", "compensation", "road accident", "no fault liability", "hit and run", "multiplier", "insurance"],
+      "source": "Motor Vehicles Act 1988, Sections 140, 166"
+    },
+    {
+      "id": "ENVIRO-001",
+      "category": "Civil Law",
+      "act": "Environment Protection Act 1986",
+      "section_article": "Section 15",
+      "title": "Environmental Violations and Penalties",
+      "content": "The Environment Protection Act 1986 is an umbrella legislation for environmental protection in India. Any person who violates the provisions of this Act or rules made thereunder is liable to imprisonment up to 5 years and/or fine up to Rs. 1 lakh. If the violation continues after conviction, an additional fine of Rs. 5,000 per day is imposed. The Supreme Court of India has used Article 21 (right to life) to protect citizens from pollution. The National Green Tribunal (NGT) established under the NGT Act 2010 adjudicates environmental disputes and can award compensation and grant injunctions for environmental damage.",
+      "keywords": ["environment", "pollution", "NGT", "National Green Tribunal", "Environmental Protection Act", "Article 21", "green law", "fine"],
+      "source": "Environment Protection Act 1986; NGT Act 2010"
+    },
+    {
+      "id": "ARBITATION-001",
+      "category": "Civil Law",
+      "act": "Arbitration and Conciliation Act 1996",
+      "section_article": "Section 7-8",
+      "title": "Arbitration as Alternative Dispute Resolution",
+      "content": "Arbitration is an alternative dispute resolution (ADR) method where parties agree to have their disputes decided by an arbitrator instead of a court. An arbitration agreement must be in writing. If a valid arbitration agreement exists and one party files a case in court, the other party can apply under Section 8 for the court to refer the dispute to arbitration. The arbitral tribunal must deliver the award within 12 months (extendable to 18 months). An arbitration award is final and binding, with limited grounds for challenge. The 2015 and 2019 amendments introduced institutional arbitration and confidentiality of proceedings to make India an international arbitration hub.",
+      "keywords": ["arbitration", "ADR", "dispute resolution", "arbitral award", "alternative to court", "Arbitration Act", "conciliation"],
+      "source": "Arbitration and Conciliation Act 1996, amended 2015 and 2019"
+    },
+    {
+      "id": "PIL-001",
+      "category": "Constitutional Law",
+      "act": "Constitutional Provisions / Supreme Court Rules",
+      "section_article": "Article 32, 226",
+      "title": "Public Interest Litigation (PIL)",
+      "content": "Public Interest Litigation (PIL) is a unique feature of Indian constitutional jurisprudence that allows any public-spirited citizen to approach the Supreme Court (under Article 32) or a High Court (under Article 226) on behalf of those unable to access justice themselves. The Supreme Court relaxed the rule of locus standi (who can file a case) in PIL matters. A letter or postcard to the court can be treated as a PIL. Issues addressed through PILs include bonded labour, undertrials in jails, environmental pollution, rights of prisoners, and corruption. Courts have developed doctrines like Absolute Liability (MC Mehta v. Union of India) through PIL proceedings.",
+      "keywords": ["PIL", "public interest litigation", "locus standi", "Supreme Court", "High Court", "justice access", "bonded labour", "MC Mehta"],
+      "source": "Constitution of India, Articles 32, 226; PIL jurisprudence"
+    },
+    {
+      "id": "LEGAL-AID-001",
+      "category": "Constitutional Law",
+      "act": "Legal Services Authorities Act 1987",
+      "section_article": "Section 12",
+      "title": "Free Legal Aid — Who is Entitled",
+      "content": "The Legal Services Authorities Act 1987 establishes NALSA (National Legal Services Authority) to provide free legal services to eligible persons. Under Section 12, persons entitled to free legal aid include: members of SC/ST communities, women and children, persons with disability, victims of trafficking, industrial workers, persons in custody, victims of mass disaster, and persons whose annual income does not exceed Rs. 3 lakhs (varies by state). Legal aid services include legal advice, representation in court, drafting of legal documents, and Lok Adalat services. Every person has the right to legal aid from the time of arrest, before being produced in court.",
+      "keywords": ["free legal aid", "NALSA", "legal services", "SC ST", "women", "income", "Lok Adalat", "legal help", "poor"],
+      "source": "Legal Services Authorities Act 1987, Section 12"
+    },
+    {
+      "id": "LEGAL-AID-002",
+      "category": "Civil Law",
+      "act": "Legal Services Authorities Act 1987",
+      "section_article": "Section 19-22",
+      "title": "Lok Adalat — People's Court",
+      "content": "Lok Adalat (People's Court) is an alternative dispute resolution forum established under the Legal Services Authorities Act 1987. It operates under the principle of conciliation and compromise. Cases that can be referred to Lok Adalat include: motor accident claims, matrimonial disputes (except divorce), labour disputes, disputes related to public utility services (electricity, water, telephone), and compoundable criminal offences. An award by Lok Adalat is deemed a decree of civil court, is final and binding, cannot be appealed in any court, and no court fee is payable. If a pending court case is settled at Lok Adalat, the entire court fee is refunded.",
+      "keywords": ["Lok Adalat", "ADR", "settlement", "court fee refund", "motor accident", "matrimonial", "labour dispute", "NALSA"],
+      "source": "Legal Services Authorities Act 1987, Sections 19-22"
+    },
+    {
+      "id": "EVIDENCE-001",
+      "category": "Criminal Law",
+      "act": "Indian Evidence Act 1872 (Now Bharatiya Sakshya Adhiniyam 2023)",
+      "section_article": "Section 25, 26",
+      "title": "Confessions to Police — Admissibility",
+      "content": "Under Section 25 of the Indian Evidence Act 1872 (now Section 22 of Bharatiya Sakshya Adhiniyam 2023), a confession made to a police officer is not admissible as evidence in a trial. Section 26 further provides that a confession made while in police custody is not admissible unless it is made in the immediate presence of a Magistrate. This protection exists to prevent police torture and coerced confessions. However, information given by an accused to police that leads to the discovery of a fact (discovery statement) is admissible under Section 27 IEA / Section 23 BSA. Electronic records are admissible under Section 65B IEA with a certificate.",
+      "keywords": ["confession", "police", "admissibility", "evidence", "IEA Section 25", "Magistrate", "custody", "discovery statement", "Section 65B"],
+      "source": "Indian Evidence Act 1872, Sections 25-27; Bharatiya Sakshya Adhiniyam 2023"
+    },
+    {
+      "id": "POSH-001",
+      "category": "Labour Law",
+      "act": "Sexual Harassment of Women at Workplace Act 2013",
+      "section_article": "Section 2-4",
+      "title": "Prevention of Sexual Harassment at Workplace (POSH)",
+      "content": "The Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act 2013 (POSH Act) protects women from sexual harassment at workplaces. Sexual harassment includes unwelcome physical contact, demands for sexual favors, sexually colored remarks, showing pornography, and other unwelcome conduct of a sexual nature. Every employer with 10 or more employees must constitute an Internal Complaints Committee (ICC). For smaller organizations or unorganized sector, a Local Complaints Committee (LCC) is constituted at the district level. A complaint must be filed within 3 months. The ICC must complete inquiry within 90 days. False complaints are also punishable.",
+      "keywords": ["sexual harassment", "workplace", "POSH Act", "ICC", "Internal Complaints Committee", "women", "employer", "metoo"],
+      "source": "Sexual Harassment of Women at Workplace Act 2013"
+    },
+    {
+      "id": "BNS-001",
+      "category": "Criminal Law",
+      "act": "Bharatiya Nyaya Sanhita 2023",
+      "section_article": "General Overview",
+      "title": "New Criminal Laws — BNS, BNSS, BSA 2023",
+      "content": "In 2023, India replaced its three main criminal laws with new legislation that came into force from July 1, 2024: (1) Bharatiya Nyaya Sanhita (BNS) 2023 replaced the Indian Penal Code 1860; (2) Bharatiya Nagarik Suraksha Sanhita (BNSS) 2023 replaced the Code of Criminal Procedure 1973; (3) Bharatiya Sakshya Adhiniyam (BSA) 2023 replaced the Indian Evidence Act 1872. Key changes include: organized crime and terrorism defined as offences in BNS; Sedition provision removed and replaced by broader offence against state; electronic/digital evidence and electronic FIR introduced; trials of cases where accused absconded can be held in-absentia; expanded definition of sexual offences. Time limits are introduced for investigation and trials.",
+      "keywords": ["BNS", "BNSS", "BSA", "new criminal law", "IPC replaced", "CrPC replaced", "July 2024", "digital evidence", "electronic FIR"],
+      "source": "BNS 2023, BNSS 2023, BSA 2023 — effective July 1, 2024"
+    },
+    {
+      "id": "TAX-001",
+      "category": "Civil Law",
+      "act": "Income Tax Act 1961",
+      "section_article": "General",
+      "title": "Basic Income Tax Provisions for Individuals",
+      "content": "Under the Income Tax Act 1961, individuals are taxed based on their annual income. For FY 2024-25, under the new tax regime (default regime), the tax slabs are: income up to Rs. 3 lakhs — Nil; Rs. 3-6 lakhs — 5%; Rs. 6-9 lakhs — 10%; Rs. 9-12 lakhs — 15%; Rs. 12-15 lakhs — 20%; above Rs. 15 lakhs — 30%. Rebate under Section 87A provides that individuals with taxable income up to Rs. 7 lakhs have nil tax liability under the new regime. The old regime continues with deductions like 80C (investments), 80D (health insurance), HRA, LTA, and standard deduction of Rs. 50,000.",
+      "keywords": ["income tax", "tax slab", "80C", "new regime", "old regime", "ITR", "rebate", "87A", "deduction"],
+      "source": "Income Tax Act 1961; Finance Act 2024"
+    },
+    {
+      "id": "PIL-002",
+      "category": "Constitutional Law",
+      "act": "Landmark Judgments",
+      "section_article": "Various",
+      "title": "Landmark Supreme Court Judgments Every Indian Should Know",
+      "content": "Key Supreme Court landmark cases: (1) Kesavananda Bharati v. State of Kerala (1973) — Basic Structure Doctrine; Parliament cannot amend the basic structure of the Constitution; (2) Maneka Gandhi v. Union of India (1978) — Expanded Article 21 to include right to live with dignity; (3) Indira Sawhney v. Union of India (1992) — Upheld OBC reservations under Mandal Commission, fixed 50% ceiling; (4) Vishaka v. State of Rajasthan (1997) — Guidelines against sexual harassment at workplace before POSH Act; (5) K.S. Puttaswamy v. Union of India (2017) — Right to Privacy is a fundamental right; (6) Navtej Johar v. Union of India (2018) — Decriminalized consensual same-sex relations under IPC Section 377; (7) Vineeta Sharma (2020) — Daughters' equal rights in ancestral property.",
+      "keywords": ["landmark judgment", "Kesavananda Bharati", "Maneka Gandhi", "Indira Sawhney", "Vishaka", "Puttaswamy", "Navtej Johar", "basic structure", "Supreme Court"],
+      "source": "Supreme Court of India — Landmark Judgments"
+    },
+    {
+      "id": "RERA-001",
+      "category": "Property Law",
+      "act": "Real Estate (Regulation and Development) Act 2016",
+      "section_article": "Section 3-11",
+      "title": "RERA — Rights of Home Buyers",
+      "content": "The Real Estate (Regulation and Development) Act 2016 (RERA) protects home buyers from fraudulent builders. Key provisions: (1) Builders must register their projects with RERA Authority before advertising or selling; (2) 70% of funds collected from buyers must be deposited in an escrow account for construction only; (3) Builders must give a carpet area (not super built-up area) as basis for pricing; (4) Defect liability of 5 years — builder must fix structural defects for 5 years after possession; (5) Buyers can withdraw and get refund with interest if builder delays possession; (6) Penalties include up to 10% of project cost and up to 3 years imprisonment for builders. Complaints can be filed online with RERA Authority.",
+      "keywords": ["RERA", "home buyer", "builder", "flat", "apartment", "escrow", "carpet area", "defect liability", "delayed possession", "real estate"],
+      "source": "Real Estate (Regulation and Development) Act 2016"
+    },
+    {
+      "id": "LOKPAL-001",
+      "category": "Civil Law",
+      "act": "Lokpal and Lokayuktas Act 2013",
+      "section_article": "Section 3",
+      "title": "Lokpal — Anti-Corruption Ombudsman",
+      "content": "The Lokpal and Lokayuktas Act 2013 established the Lokpal — India's national anti-corruption ombudsman — to inquire into and investigate allegations of corruption against public servants including the Prime Minister (with certain restrictions), Ministers, Members of Parliament, and all Group A, B, C, D officers of the Central Government. The Lokpal has the power to conduct preliminary inquiry, investigate, and if needed, prosecute. It can recommend attachment and confiscation of assets. The Lokayukta at the state level serves a similar function. The Central Vigilance Commission (CVC) and CBI also have overlapping roles in investigating corruption.",
+      "keywords": ["Lokpal", "Lokayukta", "anti-corruption", "public servant", "PM", "corruption complaint", "CVC", "investigation", "ombudsman"],
+      "source": "Lokpal and Lokayuktas Act 2013"
+    },
+    {
+      "id": "NALSA-001",
+      "category": "Social Justice Law",
+      "act": "Supreme Court Judgment / Transgender Persons Act 2019",
+      "section_article": "NALSA v. UoI 2014 / TG Act 2019",
+      "title": "Rights of Transgender Persons",
+      "content": "In NALSA v. Union of India (2014), the Supreme Court recognised transgender persons as the 'third gender' and held that they have the right to self-identify their gender. The court directed governments to grant all constitutional rights to transgender persons and provide reservations in education and employment. Following this, the Transgender Persons (Protection of Rights) Act 2019 was enacted. Key provisions include: right to self-perceived gender identity; prohibition of discrimination in education, employment, healthcare; Transgender Persons Welfare Boards at state level; Transgender Protection Cell in each state; and punishment for offences like sexual abuse and forced labour against transgender persons.",
+      "keywords": ["transgender", "third gender", "NALSA judgment", "TG Act 2019", "self-identification", "discrimination", "LGBTQ", "rights"],
+      "source": "NALSA v. Union of India (2014); Transgender Persons (Protection of Rights) Act 2019"
+    },
+    {
+      "id": "JUVENILE-001",
+      "category": "Criminal Law",
+      "act": "Juvenile Justice (Care and Protection of Children) Act 2015",
+      "section_article": "Section 2(13), 15",
+      "title": "Juvenile Justice — Treatment of Child Offenders",
+      "content": "The Juvenile Justice (Care and Protection of Children) Act 2015 defines a child as a person below 18 years of age. Children in conflict with law are dealt with by Juvenile Justice Boards (JJB) composed of a Magistrate and two social workers. For heinous offences (minimum 7 years imprisonment), children between 16-18 years may be tried as adults after assessment by JJB and Children's Court. For less serious offences, children cannot be sent to prison but may be placed in observation homes or special homes. Focus is on rehabilitation, not punishment. Child victims and witnesses are dealt with by Child Welfare Committees (CWC).",
+      "keywords": ["juvenile", "child offender", "JJB", "Juvenile Justice Act", "16-18 years", "heinous offence", "CWC", "rehabilitation", "minor"],
+      "source": "Juvenile Justice (Care and Protection of Children) Act 2015"
+    },
+    {
+      "id": "WOMEN-001",
+      "category": "Social Justice Law",
+      "act": "Dowry Prohibition Act 1961",
+      "section_article": "Section 3-4",
+      "title": "Dowry — Giving and Taking is Illegal",
+      "content": "The Dowry Prohibition Act 1961 makes giving and taking dowry a criminal offence. Dowry is any property or valuable security given or agreed to be given directly or indirectly by one party to a marriage to the other party or their parents before, at, or after the marriage. Punishment for giving or taking dowry is imprisonment of minimum 5 years and fine of not less than Rs. 15,000. Demanding dowry is punishable with minimum 6 months to 2 years imprisonment and fine up to Rs. 10,000. Giving or receiving gifts of customary nature is excluded. Dowry death (Section 304B IPC / Section 80 BNS) occurs when a married woman dies within 7 years under suspicious circumstances related to dowry harassment.",
+      "keywords": ["dowry", "Dowry Prohibition Act", "dowry death", "304B", "BNS 80", "marriage", "women rights", "harassment", "gifts"],
+      "source": "Dowry Prohibition Act 1961; IPC Section 304B; BNS Section 80"
+    },
+    {
+      "id": "INSURANCE-001",
+      "category": "Civil Law",
+      "act": "Insurance Act 1938 / IRDA Act 1999",
+      "section_article": "General",
+      "title": "Insurance Rights and Claim Process in India",
+      "content": "In India, all insurance companies are regulated by the Insurance Regulatory and Development Authority of India (IRDAI). Key consumer rights in insurance: (1) Look-in period of 15-30 days to cancel a policy if not satisfied; (2) Nomination rights under all life insurance policies; (3) Insurance companies cannot reject claims for minor procedural reasons; (4) Grievances must be resolved within 30 days; (5) Ombudsman complaints can be filed for claims up to Rs. 50 lakhs; (6) IRDAI bans mis-selling of insurance. Under the Motor Vehicles Act, third-party insurance is mandatory for all vehicles. Health insurance companies cannot deny cashless hospitalization at network hospitals without valid reason.",
+      "keywords": ["insurance", "IRDAI", "claim", "ombudsman", "health insurance", "life insurance", "third party", "look-in period", "mis-selling"],
+      "source": "Insurance Act 1938; IRDA Act 1999; IRDAI Regulations"
+    },
+    {
+      "id": "BANKING-001",
+      "category": "Civil Law",
+      "act": "Banking Regulation Act 1949 / RBI Guidelines",
+      "section_article": "General",
+      "title": "Banking Rights of Customers in India",
+      "content": "Bank customers in India have the following rights and protections: (1) Every bank must resolve customer complaints within 30 days; (2) Banking Ombudsman (now RBI Integrated Ombudsman) can be approached for unresolved grievances — free and quick resolution; (3) Banks cannot harass loan defaulters — only authorized recovery agents can contact borrowers, only between 8 AM and 7 PM; (4) Unauthorized transactions must be reported within 3 working days for zero liability; (5) All banks must have a Basic Savings Bank Deposit (zero balance) account for all; (6) KYC (Know Your Customer) norms are mandatory; (7) Deposit insurance covers up to Rs. 5 lakhs per depositor per bank under DICGC.",
+      "keywords": ["banking", "bank rights", "RBI ombudsman", "loan recovery", "deposit insurance", "DICGC", "5 lakhs", "zero liability", "KYC"],
+      "source": "Banking Regulation Act 1949; RBI Guidelines; DICGC Act"
+    },
+    {
+      "id": "LAND-001",
+      "category": "Property Law",
+      "act": "Right to Fair Compensation and Transparency in Land Acquisition Act 2013",
+      "section_article": "Section 26-30",
+      "title": "Land Acquisition and Compensation Rights",
+      "content": "The Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement Act 2013 governs government acquisition of private land. Key protections: (1) Social Impact Assessment (SIA) must be conducted; (2) 70-80% of affected people must consent for private/PPP projects; (3) Compensation is at least 2x market value in urban areas and 4x in rural areas; (4) Solatium of 100% of compensation is provided; (5) Rehabilitation and resettlement package for displaced families; (6) Acquired land cannot be transferred to a third party for a different purpose without fresh acquisition; (7) Disputes are resolved by Land Acquisition, Rehabilitation and Resettlement Authority (LARRA).",
+      "keywords": ["land acquisition", "compensation", "rehabilitation", "resettlement", "SIA", "market value", "LARRA", "consent", "farmer rights"],
+      "source": "Right to Fair Compensation and Transparency in Land Acquisition Act 2013"
+    },
+    {
+      "id": "ELECTIONS-001",
+      "category": "Constitutional Law",
+      "act": "Representation of People Act 1951",
+      "section_article": "Section 8, 100",
+      "title": "Voter Rights and Electoral Disqualifications",
+      "content": "Every Indian citizen above 18 years has the right to vote under Article 326 of the Constitution. Electoral disqualifications under Section 8 of the Representation of People Act include: conviction for offences punishable with 2 or more years imprisonment disqualifies a person from contesting elections for 6 years after release. Model Code of Conduct applies once elections are announced. NOTA (None of the Above) option is available to all voters. EVM (Electronic Voting Machine) votes are verified by Voter Verifiable Paper Audit Trail (VVPAT). Election petitions challenging election results must be filed within 45 days before the High Court. The Election Commission of India is a constitutional body.",
+      "keywords": ["voter rights", "election", "disqualification", "NOTA", "EVM", "VVPAT", "Election Commission", "RP Act", "Model Code of Conduct"],
+      "source": "Representation of People Act 1951; Constitution Article 324-329"
+    }
+  ]
+}
