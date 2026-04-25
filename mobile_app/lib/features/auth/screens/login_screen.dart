@@ -66,16 +66,16 @@ class _LoginScreenState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const Icon(Icons.gavel, size: 80, color: Colors.white),
+              Image.asset('assets/images/app_logo.png', height: 80, color: Colors.white),
               const SizedBox(height: 24),
               const Text(
-                'Legal AI Assistant',
+                'Law.Ai',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 8),
               const Text(
-                'Your Multilingual Legal Guide',
+                'Let justice be done',
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.white70),
               ),

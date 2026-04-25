@@ -1,20 +1,46 @@
-# Python
+# ── Python ──────────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
+*.egg-info/
+dist/
+build/
+.pytest_cache/
 
-# Environments
+# ── Environment / Secrets ────────────────────────────────
 .env
+.env.*
+!.env.example
 .venv
 venv/
 ENV/
 env.bak/
 venv.bak/
 
-# Project specifics
+# ── Backend specifics ────────────────────────────────────
 backend/venv/
-backend/__pycache__/
 backend/.env
 backend/law_ai_db/
 backend/law_ai_db_gemini/
+backend/data/
+
+# ── Flutter / Dart ───────────────────────────────────────
+mobile_app/.dart_tool/
+mobile_app/build/
+mobile_app/.flutter-plugins
+mobile_app/.flutter-plugins-dependencies
+mobile_app/*.iml
+mobile_app/android/.gradle/
+mobile_app/android/local.properties
+mobile_app/android/key.properties
+mobile_app/ios/.symlinks/
+mobile_app/ios/Pods/
+
+# ── IDE / Editor ─────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

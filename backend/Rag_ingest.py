@@ -243,32 +243,32 @@ Answer in {language} language. Be clear, accurate, and cite the relevant law."""
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    print("🔵 Law.Ai RAG Dataset Ingestion")
+    print("Law.Ai RAG Dataset Ingestion")
     print("=" * 50)
 
     chunks = load_dataset("indian_law_dataset.json")
-    print(f"📚 Loaded {len(chunks)} law chunks")
+    print(f"Loaded {len(chunks)} law chunks")
 
     # Print category breakdown
     from collections import Counter
     categories = Counter(c["category"] for c in chunks)
-    print("\n📊 Category Breakdown:")
+    print("\nCategory Breakdown:")
     for cat, count in categories.most_common():
-        print(f"   {cat:30s} → {count} chunks")
+        print(f"   {cat:30s} -> {count} chunks")
 
-    print("\n🔄 Starting ChromaDB ingestion...")
+    print("\nStarting ChromaDB ingestion...")
     if USE_GEMINI_EMBEDDINGS:
         ingest_with_gemini_embeddings(chunks)
     else:
         ingest_to_chromadb(chunks)
 
-    print("\n🧪 Test Query:")
+    print("\nTest Query:")
     test_q = "What are my rights when arrested by police?"
     results = query_law_db(test_q, n_results=3)
     print(f"Query: '{test_q}'")
     for r in results:
         print(f"  → [{r['relevance_score']:.2f}] {r['metadata']['title']}")
 
-    print("\n✅ Done! Your Law.Ai RAG pipeline is ready.")
+    print("\nDone! Your Law.Ai RAG pipeline is ready.")
     print("\n📌 FastAPI Integration Example:")
     print(RAG_FASTAPI_EXAMPLE)
