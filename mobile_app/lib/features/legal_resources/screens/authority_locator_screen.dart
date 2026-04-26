@@ -10,11 +10,11 @@ class AuthorityLocatorScreen extends ConsumerWidget {
 
   Future<void> _launchMaps(BuildContext context, String query) async {
     final url = Uri.parse(
-      'https://www.google.com/maps/search/?api=1&query=$query',
+      'https://www.google.com/maps/search/?api=1&query=${Uri.encodeComponent(query)}',
     );
-    if (await canLaunchUrl(url)) {
+    try {
       await launchUrl(url, mode: LaunchMode.externalApplication);
-    } else {
+    } catch (e) {
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text('Could not open map app.')),
