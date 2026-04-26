@@ -3,7 +3,6 @@ import 'package:mobile_app/core/widgets/main_drawer.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:mobile_app/core/constants/api_constants.dart';
-import 'package:mobile_app/features/legal_resources/screens/dashboard_screen.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
@@ -685,7 +684,6 @@ class _TemplatesScreenState extends ConsumerState<TemplatesScreen> {
             ],
           ),
         ),
-      ),
-    ;
+    );
   }
 }

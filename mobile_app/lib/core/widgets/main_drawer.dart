@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mobile_app/features/chat/screens/chat_screen.dart';
 import 'package:mobile_app/features/legal_resources/screens/ipc_screen.dart';
 import 'package:mobile_app/features/legal_resources/screens/templates_screen.dart';
-import 'package:mobile_app/features/legal_resources/screens/dashboard_screen.dart';
 import 'package:mobile_app/features/legal_resources/screens/emergency_screen.dart';
 import 'package:mobile_app/features/legal_resources/screens/authority_locator_screen.dart';
 import 'package:mobile_app/features/auth/screens/login_screen.dart';

@@ -76,9 +76,9 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               const SizedBox(height: 8),
               const Text(
-                'Che la giustizia sia fatta',
+                'Let justice be done',
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white70),
+                style: TextStyle(color: Colors.white70, fontStyle: FontStyle.italic),
               ),
               const SizedBox(height: 48),
               TextField(

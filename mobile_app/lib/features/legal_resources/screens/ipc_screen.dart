@@ -4,7 +4,6 @@ import 'package:mobile_app/core/widgets/main_drawer.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:mobile_app/core/constants/api_constants.dart';
-import 'package:mobile_app/features/legal_resources/screens/dashboard_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mobile_app/core/providers/language_provider.dart';
 
@@ -254,7 +253,6 @@ class _IPCScreenState extends ConsumerState<IPCScreen> {
             ),
           ],
         ),
-      ),
-    ;
+    );
   }
 }

@@ -12,7 +12,6 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:uuid/uuid.dart';
 import 'package:mobile_app/core/constants/api_constants.dart';
 import 'package:avatar_glow/avatar_glow.dart';
-import 'package:mobile_app/features/legal_resources/screens/dashboard_screen.dart';
 
 class ChatScreen extends ConsumerStatefulWidget {
   final String? conversationId;
@@ -823,7 +822,6 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
             ),
           ],
         ),
-      ),
-    ;
+    );
   }
 }
