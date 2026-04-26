@@ -75,15 +75,7 @@ class _IPCScreenState extends ConsumerState<IPCScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return PopScope(
-      canPop: false,
-      onPopInvokedWithResult: (bool didPop, dynamic result) async {
-        if (didPop) return;
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (_) => const DashboardScreen()),
-        );
-      },
-      child: Scaffold(
+    return Scaffold(
         appBar: AppBar(title: const Text('IPC Section Finder')),
         drawer: const MainDrawer(),
         body: Column(
@@ -263,6 +255,6 @@ class _IPCScreenState extends ConsumerState<IPCScreen> {
           ],
         ),
       ),
-    );
+    ;
   }
 }

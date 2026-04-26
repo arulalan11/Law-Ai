@@ -434,15 +434,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
   Widget build(BuildContext context) {
     final currentLanguage = ref.watch(languageProvider);
 
-    return PopScope(
-      canPop: false,
-      onPopInvokedWithResult: (bool didPop, dynamic result) async {
-        if (didPop) return;
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (_) => const DashboardScreen()),
-        );
-      },
-      child: Scaffold(
+    return Scaffold(
         backgroundColor: const Color(0xFF0D0D0D),
         appBar: AppBar(
           title: const Text(
@@ -832,6 +824,6 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
           ],
         ),
       ),
-    );
+    ;
   }
 }

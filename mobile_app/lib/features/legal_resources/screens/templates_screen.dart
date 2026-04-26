@@ -246,15 +246,7 @@ class _TemplatesScreenState extends ConsumerState<TemplatesScreen> {
   @override
   Widget build(BuildContext context) {
     final currentLanguage = ref.watch(languageProvider);
-    return PopScope(
-      canPop: false,
-      onPopInvokedWithResult: (bool didPop, dynamic result) async {
-        if (didPop) return;
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (_) => const DashboardScreen()),
-        );
-      },
-      child: Scaffold(
+    return Scaffold(
         appBar: AppBar(title: Text(AppStrings.get(currentLanguage, 'documentation_templates'))),
         drawer: const MainDrawer(),
         body: SingleChildScrollView(
@@ -694,6 +686,6 @@ class _TemplatesScreenState extends ConsumerState<TemplatesScreen> {
           ),
         ),
       ),
-    );
+    ;
   }
 }

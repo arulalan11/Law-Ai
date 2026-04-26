@@ -125,7 +125,7 @@ class _MainDrawerState extends ConsumerState<MainDrawer> {
                             ),
                           ),
                           onTap: () {
-                            Navigator.of(context).pushReplacement(
+                            Navigator.of(context).pop(); Navigator.of(context).push(
                               PageRouteBuilder(
                                 pageBuilder:
                                     (context, animation, secondaryAnimation) =>
@@ -175,7 +175,7 @@ class _MainDrawerState extends ConsumerState<MainDrawer> {
                             ),
                           ),
                           onTap: () {
-                            Navigator.of(context).pushReplacement(
+                            Navigator.of(context).pop(); Navigator.of(context).push(
                               PageRouteBuilder(
                                 pageBuilder:
                                     (context, animation, secondaryAnimation) =>
@@ -222,7 +222,7 @@ class _MainDrawerState extends ConsumerState<MainDrawer> {
                             ),
                           ),
                           onTap: () {
-                            Navigator.of(context).pushReplacement(
+                            Navigator.of(context).pop(); Navigator.of(context).push(
                               PageRouteBuilder(
                                 pageBuilder:
                                     (context, animation, secondaryAnimation) =>
@@ -262,25 +262,7 @@ class _MainDrawerState extends ConsumerState<MainDrawer> {
                         style: const TextStyle(color: Colors.white70),
                       ),
                       onTap: () {
-                        Navigator.of(context).pushReplacement(
-                          PageRouteBuilder(
-                            pageBuilder:
-                                (context, animation, secondaryAnimation) =>
-                                    const DashboardScreen(),
-                            transitionsBuilder:
-                                (
-                                  context,
-                                  animation,
-                                  secondaryAnimation,
-                                  child,
-                                ) {
-                                  return FadeTransition(
-                                    opacity: animation,
-                                    child: child,
-                                  );
-                                },
-                          ),
-                        );
+                        Navigator.of(context).popUntil((route) => route.isFirst);
                       },
                     ),
                     ListTile(
@@ -299,7 +281,7 @@ class _MainDrawerState extends ConsumerState<MainDrawer> {
                         style: const TextStyle(color: Colors.white70),
                       ),
                       onTap: () {
-                        Navigator.of(context).pushReplacement(
+                        Navigator.of(context).pop(); Navigator.of(context).push(
                           PageRouteBuilder(
                             pageBuilder:
                                 (context, animation, secondaryAnimation) =>
@@ -333,7 +315,7 @@ class _MainDrawerState extends ConsumerState<MainDrawer> {
                         style: const TextStyle(color: Colors.white70),
                       ),
                       onTap: () {
-                        Navigator.of(context).pushReplacement(
+                        Navigator.of(context).pop(); Navigator.of(context).push(
                           PageRouteBuilder(
                             pageBuilder:
                                 (context, animation, secondaryAnimation) =>
@@ -423,8 +405,7 @@ class _MainDrawerState extends ConsumerState<MainDrawer> {
                                   overflow: TextOverflow.ellipsis,
                                 ),
                                 onTap: () {
-                                  Navigator.of(context).pop(); // Close drawer
-                                  Navigator.of(context).pushReplacement(
+                                  Navigator.of(context).pop(); Navigator.of(context).push(
                                     PageRouteBuilder(
                                       pageBuilder:
                                           (
