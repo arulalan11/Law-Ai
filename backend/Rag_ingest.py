@@ -11,6 +11,7 @@ Usage:
 
 import json
 import os
+import functools
 from typing import List, Dict
 from dotenv import load_dotenv
 
@@ -150,18 +151,19 @@ def ingest_with_gemini_embeddings(chunks: List[Dict]):
     print(f"✅ Ingested {len(chunks)} chunks with Gemini embeddings")
 
 
-# ── Query / Retrieval Helper ──────────────────────────────────────────────────
-def query_law_db(question: str, n_results: int = 5, category_filter: str = None):
-    """
-    Retrieve top-k relevant chunks for a user question.
-    Integrate this into your FastAPI endpoint.
-    """
+# ── Global ChromaDB Cache ─────────────────────────────────────────────────────
+_chroma_collection = None
+
+def get_chroma_collection():
+    global _chroma_collection
+    if _chroma_collection is not None:
+        return _chroma_collection
     try:
         import chromadb
         from chromadb.utils import embedding_functions
     except ImportError:
         print("Install chromadb")
-        return []
+        return None
 
     if USE_GEMINI_EMBEDDINGS:
         client = chromadb.PersistentClient(path="./law_ai_db_gemini")
@@ -169,13 +171,26 @@ def query_law_db(question: str, n_results: int = 5, category_filter: str = None)
             api_key=os.environ.get("GEMINI_EMBEDDING_API_KEY", ""),
             model_name="models/gemini-embedding-001"
         )
-        collection = client.get_collection(name="indian_law_gemini", embedding_function=ef)
+        _chroma_collection = client.get_collection(name="indian_law_gemini", embedding_function=ef)
     else:
         client = chromadb.PersistentClient(path="./law_ai_db")
         ef = embedding_functions.SentenceTransformerEmbeddingFunction(
             model_name="all-MiniLM-L6-v2"
         )
-        collection = client.get_collection(name="indian_law", embedding_function=ef)
+        _chroma_collection = client.get_collection(name="indian_law", embedding_function=ef)
+    return _chroma_collection
+
+
+# ── Query / Retrieval Helper ──────────────────────────────────────────────────
+@functools.lru_cache(maxsize=100)
+def query_law_db(question: str, n_results: int = 5, category_filter: str = None):
+    """
+    Retrieve top-k relevant chunks for a user question.
+    Integrate this into your FastAPI endpoint.
+    """
+    collection = get_chroma_collection()
+    if not collection:
+        return []
 
     where_clause = {"category": category_filter} if category_filter else None
 

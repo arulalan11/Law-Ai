@@ -73,7 +73,7 @@ async def chat_endpoint(request: ChatRequest):
     if last_user_message:
         try:
             from Rag_ingest import query_law_db
-            retrieved_chunks = query_law_db(last_user_message, n_results=5)
+            retrieved_chunks = await asyncio.to_thread(query_law_db, last_user_message, 5)
             if retrieved_chunks:
                 context_parts = []
                 for c in retrieved_chunks:

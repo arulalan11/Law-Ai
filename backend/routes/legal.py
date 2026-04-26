@@ -3,6 +3,7 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from google import genai
 import json
+import asyncio
 
 router = APIRouter()
 
@@ -59,7 +60,7 @@ async def search_ipc(query: str, language: str = "English"):
         You MUST generate your ENTIRE response STRICTLY in {language} ONLY. Do NOT include any English translation or English text, unless the requested language is English.
         Do not use markdown blocks, return ONLY raw JSON.
         '''
-        res = client.models.generate_content(model='gemini-2.5-flash', contents=prompt.strip())
+        res = await asyncio.to_thread(client.models.generate_content, model='gemini-2.5-flash', contents=prompt.strip())
         # Attempt to parse json from text
         text = res.text.replace('```json', '').replace('```', '').strip()
         return json.loads(text)
@@ -73,7 +74,7 @@ async def get_daily_tip(language: str = "English"):
         return {"tip": "AI not configured."}
     try:
         prompt = f"Provide one short, useful daily legal tip for Indian citizens. You MUST generate your ENTIRE response STRICTLY in {language} ONLY. Do NOT include any English translation."
-        res = client.models.generate_content(model='gemini-2.5-flash', contents=prompt)
+        res = await asyncio.to_thread(client.models.generate_content, model='gemini-2.5-flash', contents=prompt)
         return {"tip": res.text.strip()}
     except Exception as e:
         print(f"Daily Tip Error: {e}")
@@ -85,7 +86,7 @@ async def get_law_updates(language: str = "English"):
         return {"updates": [{"title": "AI Error", "summary": "N/A"}]}
     try:
         prompt = f'Provide 2 recent or important Indian law updates. Return JSON with an "updates" array of objects with "title" and "summary". You MUST generate your ENTIRE response STRICTLY in {language} ONLY. Do NOT include any English translation.'
-        res = client.models.generate_content(model='gemini-2.5-flash', contents=prompt)
+        res = await asyncio.to_thread(client.models.generate_content, model='gemini-2.5-flash', contents=prompt)
         text = res.text.replace('```json', '').replace('```', '').strip()
         return json.loads(text)
     except Exception as e:
@@ -98,7 +99,7 @@ async def get_templates():
         return {"templates": [{"title": "AI Error", "content": "N/A"}]}
     try:
         prompt = 'Provide 2 common Indian legal document templates (e.g., FIR, Rental Agreement). Return JSON with a "templates" array of objects with "title" and "content".'
-        res = client.models.generate_content(model='gemini-2.5-flash', contents=prompt)
+        res = await asyncio.to_thread(client.models.generate_content, model='gemini-2.5-flash', contents=prompt)
         text = res.text.replace('```json', '').replace('```', '').strip()
         return json.loads(text)
     except Exception as e:
@@ -181,7 +182,7 @@ Draft the notice entirely and strictly in {req.language} ONLY. If {req.language}
 
 **Return ONLY the plaintext drafted notice. Do not include markdown blocks like ``` or any commentary.**
         '''
-        res = client.models.generate_content(model='gemini-2.5-flash', contents=prompt.strip())
+        res = await asyncio.to_thread(client.models.generate_content, model='gemini-2.5-flash', contents=prompt.strip())
         return {"draft": res.text.strip()}
     except Exception as e:
         print(f"Generate Notice Error: {e}")
