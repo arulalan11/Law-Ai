@@ -7,11 +7,7 @@ class ApiConstants {
   static const String localIpAddress = '10.165.12.116';
 
   static String get baseUrl {
-    if (kIsWeb) {
-      return 'http://127.0.0.1:8000';
-    } else {
-      // Use the actual local IP address so physical phones can connect
-      return 'http://$localIpAddress:8000';
-    }
+    // Return production Render API URL
+    return 'https://law-ai-vsa3.onrender.com';
   }
 }
