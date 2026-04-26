@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_app/features/chat/screens/chat_screen.dart';
+import 'package:mobile_app/features/legal_resources/screens/dashboard_screen.dart';
 import 'package:mobile_app/features/legal_resources/screens/ipc_screen.dart';
 import 'package:mobile_app/features/legal_resources/screens/templates_screen.dart';
 import 'package:mobile_app/features/legal_resources/screens/emergency_screen.dart';
@@ -261,7 +262,14 @@ class _MainDrawerState extends ConsumerState<MainDrawer> {
                         style: const TextStyle(color: Colors.white70),
                       ),
                       onTap: () {
-                        Navigator.of(context).popUntil((route) => route.isFirst);
+                        Navigator.of(context).pop(); Navigator.of(context).push(
+                          PageRouteBuilder(
+                            pageBuilder: (context, animation, secondaryAnimation) => const DashboardScreen(),
+                            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                              return FadeTransition(opacity: animation, child: child);
+                            },
+                          ),
+                        );
                       },
                     ),
                     ListTile(

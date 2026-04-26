@@ -4,27 +4,67 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mobile_app/core/providers/language_provider.dart';
 import 'package:mobile_app/core/constants/app_strings.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:geolocator/geolocator.dart';
 
-class AuthorityLocatorScreen extends ConsumerWidget {
+class AuthorityLocatorScreen extends ConsumerStatefulWidget {
   const AuthorityLocatorScreen({super.key});
 
+  @override
+  ConsumerState<AuthorityLocatorScreen> createState() => _AuthorityLocatorScreenState();
+}
+
+class _AuthorityLocatorScreenState extends ConsumerState<AuthorityLocatorScreen> {
   Future<void> _launchMaps(BuildContext context, String query) async {
-    final url = Uri.parse(
-      'https://www.google.com/maps/search/?api=1&query=${Uri.encodeComponent(query)}',
-    );
+    bool serviceEnabled;
+    LocationPermission permission;
+
     try {
-      await launchUrl(url, mode: LaunchMode.externalApplication);
+      serviceEnabled = await Geolocator.isLocationServiceEnabled();
+      if (!serviceEnabled) {
+        throw Exception('Location services are disabled.');
+      }
+
+      permission = await Geolocator.checkPermission();
+      if (permission == LocationPermission.denied) {
+        permission = await Geolocator.requestPermission();
+        if (permission == LocationPermission.denied) {
+          throw Exception('Location permissions are denied');
+        }
+      }
+      
+      if (permission == LocationPermission.deniedForever) {
+        throw Exception('Location permissions are permanently denied, we cannot request permissions.');
+      }
+
+      final position = await Geolocator.getCurrentPosition();
+      
+      // Pass coordinates to Google Maps directly
+      final url = Uri.parse(
+        'https://www.google.com/maps/search/${Uri.encodeComponent(query)}/@${position.latitude},${position.longitude},15z'
+      );
+
+      if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+         throw Exception('Could not open map app.');
+      }
     } catch (e) {
-      if (context.mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Could not open map app.')),
-        );
+      // Fallback if location fails
+      final urlFallback = Uri.parse(
+        'https://www.google.com/maps/search/?api=1&query=${Uri.encodeComponent(query)}'
+      );
+      try {
+        await launchUrl(urlFallback, mode: LaunchMode.externalApplication);
+      } catch (eFallback) {
+        if (context.mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('Error: Could not open map app. ${e.toString()}')),
+          );
+        }
       }
     }
   }
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     final currentLanguage = ref.watch(languageProvider);
     return Scaffold(
       appBar: AppBar(
@@ -41,7 +81,7 @@ class AuthorityLocatorScreen extends ConsumerWidget {
               child: Text(
                 AppStrings.get(currentLanguage, 'find_legal_authorities'),
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
