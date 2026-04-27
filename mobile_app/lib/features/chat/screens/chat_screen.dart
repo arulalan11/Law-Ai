@@ -89,7 +89,23 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
   }
 
   void _initSpeech() async {
-    _speechEnabled = await _speechToText.initialize();
+    try {
+      _speechEnabled = await _speechToText.initialize(
+        onError: (errorNotification) {
+          debugPrint('STT Error: ${errorNotification.errorMsg}');
+          if (mounted) {
+            setState(() => _speechEnabled = false);
+          }
+        },
+        onStatus: (status) {
+          debugPrint('STT Status: $status');
+          if (mounted) setState(() {});
+        },
+      );
+    } catch (e) {
+      debugPrint('STT Init Exception: $e');
+      _speechEnabled = false;
+    }
     setState(() {});
   }
 
@@ -164,15 +180,26 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
       case 'Malayalam': localeId = 'ml-IN'; break;
     }
 
+    if (_speechToText.isListening) {
+      await _speechToText.stop();
+    }
+
     await _speechToText.listen(
       localeId: localeId,
       onResult: (result) {
-        setState(() {
-          _messageController.text = result.recognizedWords;
-        });
+        if (mounted) {
+          setState(() {
+            _messageController.text = result.recognizedWords;
+          });
+        }
       },
+      listenFor: const Duration(seconds: 30),
+      pauseFor: const Duration(seconds: 5),
+      partialResults: true,
+      cancelOnError: true,
+      listenMode: ListenMode.confirmation,
     );
-    setState(() {});
+    if (mounted) setState(() {});
   }
 
   void _stopListening() async {
